@@ -1,0 +1,139 @@
+@import url(fontawesome-free-5.11.2-web/fontawesome-free-5.11.2-web/css/all.css) @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+/*
+Marrón Hex Color Code	#a2582c
+MarrónRGB Color Code	rgb(255, 204, 0)
+
+Gris  color: rgba(210, 215, 217, 0.75);
+Gray Hex Color Code #808080
+
+verde Rois Hex Color Code #007a53 007a53
+verde Rois  RGB Color Code	rgb(0,122, 83)
+
+verde Rois Hex Color Code #007a53
+verde Rois RGB Color Code rgb(0,122, 83)
+
+Ocre-Padron Hex Color Code #e5b700
+Ocre RGB Color Code	rgb(255, 204, 0)
+
+marron (menu hover y linea nav) RGB Color Code rgb(162, 88, 44)
+marron menu hover y linea nav) Hex Color Code #a2582c
+
+
+verde Dodro Hex Color Code #a2a240
+verde Dodro Code rgb(162, 162, 64)
+
+verde-oscuro Dodro Hex Color Code #959508
+verde-oscuro Dodro Code	rgb(149, 149, 8)
+*/
+
+
+/* --------- novo menu  desplegable ---------- */
+.dropdown_menu {
+	width: auto;
+	margin: 0em auto;
+	padding: inherit;
+
+	display: inline-flex;
+	justify-content: flex-end;
+
+	z-index: 1000;
+}
+
+.dropdown_menu {
+	background: #ccc;
+	list-style: none;
+	padding: 0px;
+	border-bottom: 1px solid #ccc;
+
+	font-family: muli, sans-serif;
+	font-weight: bold;
+	font-size: 1em;
+	-moz-box-shadow: 2px 2px 4px #ccc;
+	/* Firefox 3.5 - 3.6 */
+	-webkit-box-shadow: 2px 2px 4px #ccc;
+	/* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+	box-shadow: 2px 2px 4px #ccc;
+	/* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+/*.dropdown_menu { margin: 0.5em auto; padding: 0em; font-family: muli, sans-serif; font-weight: bold; font-size: 1em; width: 90%; display: inline-flex; justify-content: flex-end; }*/
+
+.dropdown_menu a {
+	text-decoration: none;
+}
+
+.dropdown_menu li {
+	color: #fff;
+	background: #ccc;
+	display: block;
+	float: left;
+	padding: 1rem;
+	position: relative;
+	text-decoration: none;
+	transition-duration: 0.5s;
+	z-index: 1000;
+	text-align: left;
+	-moz-box-shadow: 2px 2px 4px #ccc;
+	/* Firefox 3.5 - 3.6 */
+	-webkit-box-shadow: 2px 2px 4px #ccc;
+	/* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+	box-shadow: 2px 2px 4px #ccc;
+	/* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.dropdown_menu li a {
+	color: #666;
+}
+
+.dropdown_menu li:hover,
+.dropdown_menu li:focus-within {
+	background: #fff;
+	color: black cursor: pointer;
+	-moz-box-shadow: 2px 2px 4px #ccc;
+	/* Firefox 3.5 - 3.6 */
+	-webkit-box-shadow: 2px 2px 4px #ccc;
+	/* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+	box-shadow: 2px 2px 4px #ccc;
+	/* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+
+.dropdown_menu li:focus-within a {
+	outline: none;
+}
+
+.dropdown_menu li ul {
+	background: #ccc;
+	visibility: hidden;
+	opacity: 0;
+	min-width: 14rem;
+	position: absolute;
+	transition: all 0.5s ease;
+	margin-top: 1rem;
+	left: 0;
+	display: none;
+	-moz-box-shadow: 2px 2px 4px #ccc;
+	/* Firefox 3.5 - 3.6 */
+	-webkit-box-shadow: 2px 2px 4px #ccc;
+	/* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+	box-shadow: 2px 2px 4px #ccc;
+	/* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+}
+
+.dropdown_menu li:hover > ul,
+.dropdown_menu li:focus-within > ul,
+.dropdown_menu li ul:hover,
+.dropdown_menu li ul:focus {
+	visibility: visible;
+	opacity: 1;
+	display: block
+}
+
+.dropdown_menu li ul li {
+	clear: both;
+	width: 100%;
+	text-align: left;
+}

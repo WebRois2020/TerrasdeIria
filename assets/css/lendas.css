@@ -1,0 +1,178 @@
+	@font-face {
+			font-family: "FleurCornerCaps";
+			src: url("../../rois/lendas/FleurCornerCaps.ttf") format("truetype");
+		}
+@font-face {
+			font-family: "FleurCornerCaps";
+			src: url("../../padron/lendas/FleurCornerCaps.ttf") format("truetype");
+		}
+@font-face {
+			font-family: "Dogma";
+			src: url("../../dodro/lendas/Dogma.ttf") format("truetype");
+		}
+		.container-modal h2 {
+			clear: both;
+			text-align: left;
+			margin-bottom: 2em;
+			margin-left: 2.5em;
+			color: rgb(77,23,2);
+			text-transform: uppercase;
+		}
+
+		.container-modal span {
+			font-family: "FleurCornerCaps", serif;
+			font-size: 10em;
+			color: rgb(77,23,2);
+			float: left;
+			line-height: 0.8em;
+			padding: 0px;
+			margin: 0em .05em .05em 0px;
+		}
+		
+		.container-modal {
+			font-family: sans-serif;
+			font-size: 1.2em;
+			color: rgb(77,23,2);
+			padding: 0px 0px 0px 3em;
+			margin-left: 3em;
+		}
+		
+		
+/*		color fondo modal Noelia e Lorena*/
+		.noe{
+			background-color: #efe6ce;
+		}
+		
+		.container-modal p {
+			margin-left: 10%;
+			margin-bottom: 1em;
+			width: 80%;
+			
+		}
+/****************************************/
+		
+/*
+		.container-modal p {
+			margin-left: 10%;
+			margin-bottom: 5em;
+			width: 80%;
+			line-height: 1.5em;
+			
+		}
+*/
+
+		.container-modal i{
+			font-size: .7em;
+			color:rgb(77,23,2);
+			float: left;
+			clear: both;
+		}
+		
+
+		ul{
+			margin-left: 6.5em;
+		}
+		
+		li{
+			font-weight: normal;
+		}
+		
+		.fuente {
+			font-size: .8em;
+		}
+		
+		.fuente .negrita{
+			margin-bottom: 1em;
+		}
+		
+
+/* para lendas Dodro */
+
+	
+
+		.container-modal2 h2 {
+			clear: both;
+			text-align: left;
+			margin-bottom: 2em;
+			margin-left: 2.5em;
+			color: rgb(77,23,2);
+			text-transform: uppercase;
+		}
+
+		.container-modal2 span {
+			font-family: "Dogma";
+			font-size: 20em;
+			color: rgb(77,23,2);
+			float: left;
+            height: 7rem;
+			line-height: 0.9em;
+			padding: 0px;
+			margin: -.05em .05em .05em 0px;
+            margin-top: -2.5rem;
+            white-space: nowrap;
+		}
+		
+		.container-modal2 {
+			font-family: sans-serif;
+			font-size: 1.2em;
+			color: rgb(77,23,2);
+			
+			padding: 0px 0px 0px 3em;
+			margin-left: 3em;
+		}
+		
+		
+/*		color fondo modal Noelia e Lorena*/
+		.noe{
+	  	background-color: #efe6ce;
+			
+		}
+/****************************************/
+		
+		.container-modal2 p.parrafo_dodro {
+			margin-left: 10%;
+			margin-bottom: 5em;
+			width: 80%;
+			line-height: 1.5em;
+			
+		}
+        
+        .parrafo_dodro:first-child{
+            margin: 0;
+            
+        }
+		
+
+		.container-modal2 i{
+			font-size: .7em;
+			color:rgba(77,23,2, .8);
+			float: left;
+			clear: both;
+			
+			 
+		}
+		
+
+			.container-modal2 ul{
+			margin-left: 6.5em;
+		}
+		
+		.container-modal2 	li{
+			font-weight: normal;
+		}
+		
+			.container-modal2 .fuente {
+			font-size: .8em;
+		}
+		
+		.container-modal2	.fuente .negrita{
+			margin-bottom: 1em;
+		}
+        
+    	.container-modal2    q.refran{
+       
+            margin-left: 20em;
+            font-size: .9em;
+            
+        }
+		

@@ -1,0 +1,129 @@
+/*--- Menu 2 desplegable ---*/
+
+#nav-nova {
+	margin: 0.5em auto;
+	padding: 0em;
+	font-family: muli, sans-serif;
+	font-weight: bold;
+	font-size: 1em;
+	width: 90%;
+	display: inline-flex;
+	justify-content: flex-end;
+	/*border-top: 1px solid #ccc;*/
+}
+
+#nav-nova > ul {
+	width: auto;
+	padding: 0em;
+	/* ¿aumentar si agregamos mais elementos ao menú? */
+}
+
+#nav-nova li {
+	background-color: #eee;
+	color: black
+}
+
+#nav-nova > ul > li {
+	/* estilo solo nivel superior li */
+	list-style: none;
+	box-shadow: 1px 1px 1px rgba(162, 88, 44, 0.5);
+	display: inline-block;
+	/* display ecesario nivel superior li */
+	line-height: inherit;
+	position: relative;
+	margin: 0em 0em 0em 0em;
+	padding: 0.2em;
+	width: auto;
+	border-radius: 3px;
+
+	border: 1px solid rgba(204, 204, 204, 0.5);
+	z-index: 100;
+	border-radius: 0.5em 0.5em 0em 0em;
+}
+
+#nav-nova li ul {
+	position: absolute;
+	/* position:absolute necesario para desplegar o submenu */
+	left: 0%;
+	top: 1.2em;
+	list-style: none;
+	text-align: left;
+	width: 10vw;
+	padding: 0.2em;
+	/* font: bold 12px 'Open Sans Condensed', sans-serif; */
+	z-index: 3;
+	max-height: 0px;
+	overflow: hidden;
+	/* Esto é importante para mostrar/ocultar a animación CSS */
+	-webkit-transition: max-height 0.1s linear;
+	-moz-transition: max-height 0.1s linear;
+	transition: max-height 0.1s linear;
+
+
+}
+
+#nav-nova li ul li {
+	background-color: rgba(255, 255, 255, 0.9);
+
+	font-weight: bold;
+	/*border: 1px solid rgba(162, 88, 44, 0.5);*/
+}
+
+
+#nav-nova li ul li:first-child {
+	border-radius: 3px 3px 0 0;
+	margin-top: 1em;
+
+}
+
+#nav-nova li:hover ul {
+	max-height: 40rem;
+	/* Aumentar si se agregan máis elementos desplegables */
+}
+
+#nav-nova > ul > li > a {
+	/* estilo opcions menu das seccions */
+	text-decoration: none !important;
+	padding: 0.5em;
+	border-radius: 0.5em;
+
+}
+
+
+#nav-nova li ul li a {
+	/* estilo opcions submenu das seccions */
+	padding: 0.8em;
+	text-decoration: none !important;
+	display: block;
+}
+
+#nav-nova li ul li > a:hover {
+	background-color: rgb(204, 204, 204, 0.5);
+	color: inherit;
+	padding: 0.8em;
+	border-radius: 0.5em;
+
+}
+
+
+
+
+/* #nav-nova li ul li:first-child:before {
+	the pointer tip 
+	content: '';
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	border: 5px solid transparent;
+	border-bottom-color: #313131;
+	left: 50%;
+	top: -10px;
+	margin-left: -5px;
+}
+
+#nav-nova li ul li:last-child {
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+}*/
+
+/* transition animation on hover */

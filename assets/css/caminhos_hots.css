@@ -1,0 +1,420 @@
+.container {
+	position: relative;
+	display: block !important;
+	width: 100%;
+	height: auto;
+	background: url(../../imagenes/img_padron/caminhos/esquema-Padron_Iria_horizontal.jpg) no-repeat center;
+	background-size: contain;
+	text-align: center;
+	margin: 0 auto;
+	box-shadow: 5px 5px 10px #666;
+	border-radius: 1em;
+
+}
+
+input {
+	display: none;
+}
+
+.button {
+	display: absolute;
+	font-weight: bold;
+	/*background-color: #ccc;*/
+	display: block;
+	padding: 0.5em;
+	border-radius: 100%;
+	cursor: pointer;
+	/*animation:  fadein .5s;*/
+	animation: pulse 1.5s infinite;
+	background: transparent;
+}
+
+.button i {
+	font-size: 1.5em;
+	color: #8f6549;
+}
+
+.button:hover {
+	color: #ccc;
+	color: #fff;
+	/*background: white;*/
+}
+
+/* cerrar contido-mapa */
+
+.closebtn {
+	text-decoration: none;
+	float: right;
+	margin: 1em;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #a2582c;
+}
+
+.closebtn:hover,
+.closebtn:focus {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.button img {
+	width: 47px;
+	height: 47px;
+	padding: 0px;
+	margin: 0px;
+}
+
+#b1,
+#b2,
+#b3,
+#b4,
+#b5,
+#b6,
+#b7,
+#b8,
+#b9,
+#b10,
+#b11,
+#b12,
+#b13,
+#b14,
+#b15,
+#b16,
+#b17,
+#b18,
+#b19,
+#b20,
+#b21,
+#b22,
+#b23,
+#b24 {
+	border: none;
+	width: 47px;
+	height: 47px;
+	padding: 0px;
+	margin: 0px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+
+
+#b1 {
+	position: relative;
+	right: 32.5vw;
+	top: 57vh;
+
+	/*background: #fff;*/
+}
+
+#b2 {
+	position: relative;
+	right: 28vw;
+	top: 47vh;
+}
+
+#b3 {
+	position: relative;
+	right: 14vw;
+	top: 39vh;
+}
+
+#b4 {
+	position: relative;
+	right: 0vw;
+	top: 18.5vw;
+}
+
+#b5 {
+	position: relative;
+	right: 0vw;
+	top: 22vw;
+}
+
+#b6 {
+	position: relative;
+	right: 0vw;
+	top: 25.5vw;
+}
+
+#b7 {
+	position: relative;
+	right: 0vw;
+	top: 24vw;
+}
+
+#b8 {
+	position: relative;
+	right: 0vw;
+	top: 28vw;
+}
+
+#b9 {
+	position: relative;
+	left: 13vw;
+	bottom: 13vh;
+}
+
+#b10 {
+	position: relative;
+	left: 19vw;
+	bottom: 16vw;
+}
+
+#b11 {
+	position: relative;
+	right: 0vw;
+	top: 35vw;
+}
+
+#b12 {
+	position: relative;
+	right: 0vw;
+	top: 38vw;
+}
+
+#b13 {
+	position: relative;
+	right: 0vw;
+	top: 28vw;
+}
+
+
+
+#input1:checked ~ #content1,
+#input2:checked ~ #content2,
+#input3:checked ~ #content3,
+#input4:checked ~ #content4,
+#input5:checked ~ #content5,
+#input6:checked ~ #content6,
+#input7:checked ~ #content7,
+#input8:checked ~ #content8,
+#input9:checked ~ #content9,
+#input10:checked ~ #content10,
+#input11:checked ~ #content11,
+#input12:checked ~ #content12,
+#input13:checked ~ #content13 {
+	display: block;
+	animation: pulse .5s;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+input:checked ~ label .button {
+	display: none !important;
+	animation: pulse .5s;
+	background: transparent;
+}
+
+@keyframes pulse {
+	from {
+		box-shadow: 0 0 0 3px #d4e16f;
+		background: transparent;
+		/*rgb(211, 47, 47)*/
+		;
+	}
+
+	to {
+		box-shadow: 0 0 0 7px rgba(0, 0, 0, 0);
+	}
+}
+
+/*
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeout {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+*/
+
+
+/*	.cta {
+			display: inline-block;
+			background: #ccc;
+			color: white;
+			padding: 5px 5px;
+			margin-top: 48px;
+			border-radius: 24px;
+			text-decoration: none;
+			transition: all .3s ease;
+		}
+		.cta:hover {
+			text-decoration: underline !important;
+			box-shadow: 1px 1px 3px #222222;
+
+		}*/
+
+
+[data-title]:after {
+	content: attr(data-title);
+	background-color: rgba(255, 209, 0, 0.8);
+	/*#ffd100 */
+	color: #666;
+	font-family: "Roboto Slab", serif;
+	position: absolute;
+	padding: 0px;
+	width: auto;
+	box-shadow: 1px 1px 3px #222222;
+	opacity: 0;
+	border: none;
+	z-index: 999999999999999;
+	visibility: hidden;
+	border-radius: 6px;
+	padding: .5em;
+}
+
+[data-title]:hover:after {
+	opacity: 1;
+	transition: all 0.1s ease 0.5s;
+	visibility: visible;
+
+	overflow: visible;
+
+}
+
+[data-title] {}
+
+/* contido dos modales*/
+
+.contido_mapa {
+	background: white;
+	display: none;
+	margin: 0 auto;
+	padding: 2em;
+	width: 100%;
+	top: auto;
+	height: auto;
+	border-radius: 8px;
+	box-shadow: 1px 2px 4px 0 #ccc, 1px 4px 8px 0 #ccc;
+}
+
+
+.contido_mapa h2 {
+	width: auto;
+	color: #8f6549;
+	text-align: left;
+}
+
+.contido_mapa div {
+	width: 95%;
+	margin: 0 auto;
+	padding: 1em;
+	text-align: left;
+	box-shadow: none;
+}
+
+.contido_mapa i {
+	width: auto;
+	color: #8f6549;
+	font-size: 1.7em;
+}
+
+.contido_mapa p {
+	width: 100%;
+	text-align: left;
+	margin: 1em;
+	padding: 1em;
+	background-color: #eee;
+}
+
+.google-map {
+	text-align: center;
+	margin: 0 auto;
+
+}
+
+.google-map iframe {
+	display: block;
+	margin: 1em;
+	padding: 1em;
+	box-shadow: 5px 5px 10px #eee;
+	border-radius: 0.5em;
+
+}
+
+/*
+.contido_mapa-header {
+	font-family: "Roboto Slab", serif;
+	margin-top: auto;
+	font-size: 1.5em;
+}
+*/
+
+
+
+/* El tooltip de imagenes */
+/*El tooltip por defecto estara oculto */
+/*
+.cssToolTip:hover:after {
+	background-color: #fff;
+	border: 1px solid #fff;
+	box-shadow: 5px 5px 5px #ccc;
+	color: #000;
+	font-size: 0.7em;
+	padding: 0.3em;
+	width: auto;
+	z-index: 999999;
+	margin: 0 auto;
+	border-radius: 0.2em;
+}
+*/
+
+
+
+.cssToolTip {
+	position: relative;
+	/* Esta clase tiene que tener posicion relativa */
+	color: #000;
+	/* Color del texto */
+}
+
+.cssToolTip i {
+	font-size: 1.5em;
+	color: #8f6549;
+	margin: 0px 1em 0px 1em;
+}
+
+.cssToolTip span {
+	background-color: #fff;
+	border: 2px solid #fff;
+	box-shadow: 5px 5px 5px #333;
+	color: #000;
+	display: none;
+	/* El tooltip por defecto estara oculto */
+	font-size: 0.8em;
+	max-width: auto;
+	z-index: 999999;
+	padding: 1em;
+	margin: 1em;
+	border-radius: 0.2em;
+}
+
+/* El tooltip cuando se muestra */
+
+.cssToolTip:hover span {
+	display: block;
+	margin: 0 auto;
+	box-shadow: none;
+}
+
+.cssToolTip img {
+	width: 75%;
+	box-shadow: 5px 5px 5px #ccc;
+	border-radius: 0.5em;
+}

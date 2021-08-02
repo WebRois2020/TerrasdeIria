@@ -1,0 +1,82 @@
+	.tarxeta {
+
+			margin:2em;
+			display: inline-block;
+			background-color: transparent;
+			width: 19vw;
+			height: 32vh;
+			perspective: 1000px;
+		}
+
+		.tarxeta-inner {
+			position: relative;
+			width: 100%;
+			height: 100%;
+			text-align: inherit;
+			vertical-align: middle;
+			transition: transform 0.6s;
+			transform-style: preserve-3d;
+			box-shadow: 0 4px 8px 0 #666;
+			/* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
+
+			-moz-box-shadow: 0 4px 8px 0 #666;
+			/* Firefox 3.5 - 3.6 */
+			-webkit-box-shadow: 0 4px 8px 0 #666;
+			/* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+			border-radius: 2em;
+		}
+
+		.tarxeta:hover .tarxeta-inner {
+			transform: rotateY(180deg);
+		}
+
+		.tarxeta-front,
+		.tarxeta-back {
+			padding: 0.5em;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			-webkit-backface-visibility: hidden;
+			backface-visibility: hidden;
+		}
+
+		.tarxeta-front {
+			font-size: 1.1em;
+			background-color: #bebebe;
+			vertical-align: middle;
+			padding: auto;
+			color: black;
+			border-radius: .7em;
+		}
+
+        .tarxeta-front img{
+            width: 25%;
+            opacity: 0.5;
+            float:right;
+        
+           margin-bottom: 0.5em;
+           
+        }
+		.tarxeta-back {
+			background-color:white;
+			color: white;
+			transform: rotateY(180deg);
+			border-radius: .7em;
+			padding: .7em;
+		}
+
+		.tarxeta-back ul li {
+			width: 95%;
+			margin: 0px 0px .5em 0px;
+			
+		}
+      
+        
+        
+		.tarxeta-back i,
+		.tarxeta-back .negrita{
+			display: block;
+			font-weight: bolder;
+			color: #a2582c;
+			margin-top: .7em;
+		}
