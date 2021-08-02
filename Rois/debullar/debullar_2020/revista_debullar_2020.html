@@ -1,0 +1,599 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Revista Debullar Número 4</title>
+<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta lang="gl">
+	<meta itemprop="author" content="Obradoiro Programa de Emprego Xuventude en Acción 2019 2020 2021 Dodro, Padrón, Rois." />
+	<meta name="title" content="Sitio Coñece Terras de Iria, creado no Obradoiro Programa de Emprego Xuventude en Acción 2019 2020 2021 Dodro, Padrón, Rois.">
+	<meta name="description" content="Sitio Coñece Terras de Iria, creado no Obradoiro Programa de Emprego Xuventude en Acción 2019 2020 2021 Concello de Dodro, Concello de Padrón e Concello de Rois.">
+	<meta name="keywords" content="Dodro, Rois, Padrón, Municipio, Concello, Ayuntamiento, Terras de Iria, Galicia, Xacobeo, Patrimonio, Historia, Lendas e Tradicións, Festas, Persoeiros, Camiño de Santiago, Música Tradicional, Roteiros, Natureza, Servizos,Toponimia,">
+	<meta name="robots" content="index,follow" />
+
+
+	<script src="https://kit.fontawesome.com/f35a40f132.js" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="../../extras/jquery.min.1.7.js"></script>
+	<script type="text/javascript" src="../../extras/modernizr.2.5.3.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../../../assets/css/menu.css" />
+    
+
+	<link rel="icon" href="../../../favicon.ico"/>
+
+	<style type="text/css">
+		/* contenedor da imaxe para colocar as frechas esquerda e dereita */
+		.container {
+			position: relative;
+		}
+
+		/* Ocultamos as imágenes */
+		.mySlides {
+			display: none;
+			text-align: center;
+		}
+
+		/* ancho das imaxenes cando se ven */
+		.mySlides>img {
+			width: 50vw;
+		}
+
+		/* punteiro sobre as imáxes en miniatura */
+		.cursor {
+			cursor: pointer;
+		}
+
+		/* botón next prev*/
+		.prev,
+		.next {
+			cursor: pointer;
+			position: absolute;
+			top: 40%;
+			width: auto;
+			padding: .2em;
+			margin-top: -50px;
+			color: white;
+			background: #ccc;
+			font-weight: bold;
+			font-size: 2em;
+			border-radius: .5em;
+			user-select: none;
+			-webkit-user-select: none;
+		}
+
+		/* posicionamos botón next á dereita*/
+		.next {
+			right: 0;
+		}
+
+		/* color de fondo negro transparencia, texto branco */
+		.prev:hover,
+		.next:hover {
+			background-color: rgba(0, 0, 0, 0.2);
+			color: #000
+		}
+
+		.row:after {
+			content: "";
+			display: table;
+			clear: both;
+		}
+
+		/*  contenedores da miniaturas */
+		.column {
+			float: left;
+			width: 10%;
+			padding: .2em;
+		}
+
+		.column img {
+			width: 100%;
+		}
+
+		.column img:hover {
+			-webkit-transform: scale(2);
+			transform: scale(2);
+		}
+
+		/* transparencia das miniatruas  */
+		.paxina {
+			opacity: 0.6;
+		}
+
+		.active,
+		.paxina:hover {
+			opacity: 1;
+		}
+
+	</style>
+
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		// controles next/prev 
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+
+		// controles miniaturas das imaxes 
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var paxinas = document.getElementsByClassName("paxina");
+			if (n > slides.length) {
+				slideIndex = 1
+			}
+			if (n < 1) {
+				slideIndex = slides.length
+			}
+			for (i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			for (i = 0; i < paxinas.length; i++) {
+				paxinas[i].className = paxinas[i].className.replace(" active", "");
+			}
+			slides[slideIndex - 1].style.display = "block";
+			paxinas[slideIndex - 1].className += " active";
+		}
+
+		function indexMiniaturas() {
+			document.getElementsByClassName("cursor").style.zIndex = "999999999";
+		}
+
+	</script>
+</head>
+
+<body>
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<!-- *************** INICIO header  *************** -->
+				<header>
+					<!-- <a href="index.html"><img  src="imagenes/logoterras.png"></a> -->
+					<a name="flotante"> </a>
+
+					<!-- *************** INICIO navegacion web  *************** -->
+					<nav class="nav-web">
+						<div class="inactive"><a class="nav-dodro" href="../../dodro.html">Dodro</a></div>
+						<div class="inactive"><a class="nav-padron" href="../../padron.html">Padrón</a> </div>
+						<div class="active"><a class="nav-rois" href="../../../rois.html">Rois</a> </div>
+					</nav>
+				</header>
+				<!-- *************** FIN header  *************** -->
+				<!-- *************** INICIO MENU NUEVO *************** -->
+
+				<div id="nav-nova">
+					<ul class="dropdown_menu">
+						<li>
+							<a href="#">Camiños</a>
+							
+				            <ul>
+								<li><a href="#.html">Ruta da Estrela</a></li>
+							</ul>
+
+						</li>
+						<li>
+							<a href="#">Formacións</a>
+							<ul>
+								<li><a href="../../formacions/portada.html">Portada</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Historia</a>
+							<ul>
+								<li><a href="../../lendas/lendas_rois.html">Lendas</a></li>
+								<li><a href="../../historia/historia_Rois.html">Historia</a></li>
+								<li><a href="../debullar_portada.html">Debullar</a></li>
+                                <li><a href="../../LandArtSeira/Land_Art_Seira.html">Land Art en Seira</a></li>
+								<li><a href="../../festas/festas_rois.html">Festas</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="../../mulleres/mulleres_de_rois.html">Mulleres</a>
+							<ul>
+
+							</ul>
+						</li>
+						<li>
+							<a href="#">Natureza</a>
+							<ul>
+								<li><a href="../../natureza/arbores_senlleiras.html">Árbores senlleiras</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Patrimonio</a>
+							
+							 <ul>
+								<li><a href="../../Patrimonio/capelas/capelas_intro.html">Capelas</a></li>
+								<li><a href="../../Patrimonio/castros/castros_intro.html">Castros</a></li>
+								<li><a href="../../Patrimonio/cruceiros/cruceiros_Rois.html">Cruceiros</a></li>
+								<li><a href="../../patrimonio/horreos/horreos_rois.html">Hórreos</a></li>
+								<li><a href="../../patrimonio/igrexas/igrexas_Rois.html">Igrexas</a></li>
+								<li><a href="../../patrimonio/muinhos/muinhos_intro.html">Muíños</a></li>
+								<li><a href="../../patrimonio/pazos_casas/pazos_casas_intro.html">Pazos e casas</a></li>
+							</ul>
+
+						</li>
+						<li>
+							<a href="#">Persoeiros</a>
+							<ul>
+								<li><a href="../../persoeiros/persoeiros_rois.html#id01">Rosa del Río Otero</a></li>
+								<li><a href="../../persoeiros/persoeiros_rois.html#id02">Jesús Blanco Villar</a></li>
+
+								<li><a href="../../persoeiros/persoeiros_rois.html#id03">Pere Tobaruela</a></li>
+
+								<li><a href="../../persoeiros/persoeiros_rois.html#id04">Camilo Seira</a></li>
+
+                                <li><a href="../../persoeiros/persoeiros_rois.html#id05">Manuel Soto</a></li>
+								<li><a href="../../persoeiros/persoeiros_rois.html#id06">Miguel Ángel Vigo</a></li>
+								<li><a href="../../persoeiros/persoeiros_rois.html#id07">Manuel Rodríguez</a></li>
+								<li><a href="../../persoeiros/persoeiros_rois.html#id08">Martín Bouzas</a></li>
+								<li><a href="../../persoeiros/persoeiros_rois.html#id09">Xurxo Neo</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Roteiros</a>
+							<ul>
+                                <li><a href="../../rutas/ruta_castro_lupario.html">Do Castro Lupario</a></li>
+                                <li><a href="../../rutas/ruta_penicias.html">Das Penicias</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Servizos</a>
+							<ul>
+								<li><a href="../../servizos/servizos_cultura_rois.html">Cultura</a></li>
+								<li><a href="../../servizos/servizos%20_deporte_rois.html">Deporte</a></li>
+								<li><a href="../../servizos/servizos_educacion_rois.html">Educación</a></li>
+                                <li><a href="../../servizos/servizos_sociais_rois.html">Social</a></li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+				<!-- *************** FIN MENU NUEVO *************** -->
+				<!-- inicio Content -->
+				<section class="content">
+					<div class="migas"><a href="#">Historia</a> <i class="fa fa-chevron-right "></i> <a href="#"> Revista Debullar 2020</a> </div>
+
+					<header class="main">
+						<h1 class="texto-verde">Revista Debullar Número 4 | 2020 </h1><br>
+					</header>
+					<!-- INICIO revista -->
+
+					<div class="container">
+						<!-- imaxe tamaño real -->
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_1.jpg" alt="Revista Debullar 2020 páxina 1">
+						</div>
+
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_2.jpg" alt="Revista Debullar 2020 páxina 2">
+						</div>
+
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_3.jpg" alt="Revista Debullar 2020 páxina 3">
+						</div>
+
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_4.jpg" alt="Revista Debullar 2020 páxina 4">
+						</div>
+
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_5.jpg" alt="Revista Debullar 2020 páxina 5">
+						</div>
+
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_6.jpg" alt="Revista Debullar 2020 páxina 6">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_7.jpg" alt="Revista Debullar 2020 páxina 7">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_8.jpg" alt="Revista Debullar 2020 páxina 8">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_9.jpg" alt="Revista Debullar 2020 páxina 9">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_10.jpg" alt="Revista Debullar 2020 páxina 10">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_11.jpg" alt="Revista Debullar 2020 páxina 11">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_12.jpg" alt="Revista Debullar 2020 páxina 12">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_13.jpg" alt="Revista Debullar 2020 páxina 13">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_14.jpg" alt="Revista Debullar 2020 páxina 14">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_15.jpg" alt="Revista Debullar 2020 páxina 15">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_16.jpg" alt="Revista Debullar 2020 páxina 16">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_17.jpg" alt="Revista Debullar 2020 páxina 17">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_18.jpg" alt="Revista Debullar 2020 páxina 18">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_19.jpg" alt="Revista Debullar 2020 páxina 19">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_20.jpg" alt="Revista Debullar 2020 páxina 20">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_21.jpg" alt="Revista Debullar 2020 páxina 21">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_22.jpg" alt="Revista Debullar 2020 páxina 22">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_23.jpg" alt="Revista Debullar 2020 páxina 23">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_24.jpg" alt="Revista Debullar 2020 páxina 24">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_25.jpg" alt="Revista Debullar 2020 páxina 25">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_26.jpg" alt="Revista Debullar 2020 páxina 26">
+						</div>
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_27.jpg" alt="Revista Debullar 2020 páxina 27">
+						</div>
+
+						<div class="mySlides">
+							<img src="pages_debullar_2020/page_28.jpg" alt="Revista Debullar 2020 páxina 28">
+						</div>
+                        
+                        <div class="mySlides">
+							<img src="pages_debullar_2020/page_29.jpg" alt="Revista Debullar 2020 páxina 29">
+						</div>
+                        
+                        <div class="mySlides">
+							<img src="pages_debullar_2020/page_30.jpg" alt="Revista Debullar 2020 páxina 30">
+						</div>
+                        
+                        <div class="mySlides">
+							<img src="pages_debullar_2020/page_31.jpg" alt="Revista Debullar 2020 páxina 31">
+						</div>
+                        
+                        <div class="mySlides">
+							<img src="pages_debullar_2020/page_32.jpg" alt="Revista Debullar 2020 páxina 32">
+						</div>
+                        
+                        <div class="mySlides">
+							<img src="pages_debullar_2020/page_33.jpg" alt="Revista Debullar 2020 páxina 33">
+						</div>
+                        
+                        <div class="mySlides">
+							<img src="pages_debullar_2020/page_34.jpg" alt="Revista Debullar 2020 páxina 34">
+						</div>
+                        
+                        <div class="mySlides">
+							<img src="pages_debullar_2020/page_35.jpg" alt="Revista Debullar 2020 páxina 35">
+						</div>
+                        
+                        <div class="mySlides">
+							<img src="pages_debullar_2020/page_36.jpg" alt="Revista Debullar 2020 páxina 36">
+						</div>
+                        
+                      
+
+						<!-- ************************************************ 
+							SUSI: falta poñer hasta páxina 40 
+						************************************************ -_>
+
+						<!-- Next e previous botons -->
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+						<!-- miniaturas -->
+						<div class="row">
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_1.jpg" alt="Revista Debullar 2020 páxina 1" onclick="currentSlide(1)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_2.jpg" alt="Revista Debullar 2020 páxina 2" onclick="currentSlide(2)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_3.jpg" alt="Revista Debullar 2020 páxina 3" onclick="currentSlide(3)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_4.jpg" alt="Revista Debullar 2020 páxina 4" onclick="currentSlide(4)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_5.jpg" alt="Revista Debullar 2020 páxina 5" onclick="currentSlide(5)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_6.jpg" alt="Revista Debullar 2020 páxina 6" onclick="currentSlide(6)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_7.jpg" alt="Revista Debullar 2020 páxina 7" onclick="currentSlide(7)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_8.jpg" alt="Revista Debullar 2020 páxina 8" onclick="currentSlide(8)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_9.jpg" alt="Revista Debullar 2020 páxina 9" onclick="currentSlide(9)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_10.jpg" alt="Revista Debullar 2020 páxina 10" onclick="currentSlide(10)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_11.jpg" alt="Revista Debullar 2020 páxina 11" onclick="currentSlide(11)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_12.jpg" alt="Revista Debullar 2020 páxina 12" onclick="currentSlide(12)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_13.jpg" accesskey="Revista Debullar 2020 páxina 13" onclick="currentSlide(13)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_14.jpg" alt="Revista Debullar 2020 páxina 14" onclick="currentSlide(14)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_15.jpg" alt="Revista Debullar 2020 páxina 15" onclick="currentSlide(15)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_16.jpg" alt="Revista Debullar 2020 páxina 16" onclick="currentSlide(16)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_17.jpg" alt="Revista Debullar 2020 páxina 17" onclick="currentSlide(17)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_18.jpg" alt="Revista Debullar 2020 páxina 18" onclick="currentSlide(18)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_19.jpg" alt="Revista Debullar 2020 páxina 19" onclick="currentSlide(19)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_20.jpg" alt="Revista Debullar 2020 páxina 20" onclick="currentSlide(20)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_21.jpg" alt="Revista Debullar 2020 páxina 21" onclick="currentSlide(21)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_22.jpg" alt="Revista Debullar 2020 páxina 22" onclick="currentSlide(22)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_23.jpg" alt="Revista Debullar 2020 páxina 23" onclick="currentSlide(23)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_24.jpg" alt="Revista Debullar 2020 páxina 24" onclick="currentSlide(24)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_25.jpg" alt="Revista Debullar 2020 páxina 25" onclick="currentSlide(25)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_26.jpg" alt="Revista Debullar 2020 páxina 26" onclick="currentSlide(26)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_27.jpg" alt="Revista Debullar 2020 páxina 27" onclick="currentSlide(27)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_28.jpg" alt="Revista Debullar 2020 páxina 28" onclick="currentSlide(28)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_29.jpg" alt="Revista Debullar 2020 páxina 29" onclick="currentSlide(29)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_30.jpg" alt="Revista Debullar 2020 páxina 30" onclick="currentSlide(30)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_31.jpg" alt="Revista Debullar 2020 páxina 31" onclick="currentSlide(31)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_32.jpg" alt="Revista Debullar 2020 páxina 32" onclick="currentSlide(32)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_33.jpg" alt="Revista Debullar 2020 páxina 33" onclick="currentSlide(33)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_34.jpg" alt="Revista Debullar 2020 páxina 34" onclick="currentSlide(34)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_35.jpg" alt="Revista Debullar 2020 páxina 35" onclick="currentSlide(35)">
+							</div>
+							<div class="column">
+								<img class="paxina cursor" src="pages_debullar_2020/page_36.jpg" alt="Revista Debullar 2020 páxina 36" onclick="currentSlide(36)">
+							</div>
+							
+						</div>
+					</div>
+					<!-- FIN revista -->
+
+					<div><a href="https://issuu.com/concelloderois/docs/2020_revista_rois">Ver revista en issuu</a></div>
+					<span><q>Fonte: Concello de Rois || Revista Debullar 2020</q></span>
+					<br>
+
+					<!-- Footer -->
+					<footer>
+						<div class="copyright">
+							<img src="../../../imagenes/logos.jpg" alt="Logotipos Obradoiros de Emprego" />
+							<div>
+								<a target="_blank" href="../../../videos/Obradoiro Rois.m4v">O proxecto</a>
+								<a href="../../sitemap.html">Mapa Web</a>
+							</div>
+							<div>
+								<a title="Link a Concello de Dodro" href="http://www.dodro.gal/" target="_blank"> Concello de Dodro</a>
+								<a title="Link a Concello de Padrón" href="http://padron.gal/es/" target="_blank"> Concello de Padrón</a>
+								<a title="Link a Concello de Rois" href="https://www.rois.gal/gl/" target="_blank">Concello de Rois</a>
+							</div>
+						</div>
+					</footer>
+				</section>
+				<!-- fin content -->
+				<a class="flotante" href="#flotante" title="Ir arriba"><i class="fa fa-arrow-circle-up fa-2x"></i></a>
+				<!-- fin content -->
+			</div>
+			<!-- fin inner -->
+		</div>
+		<!-- fin main -->
+
+		<!-- inicio Sidebar -->
+		<div id="sidebar">
+			<!-- Menu Sidebar -->
+			<div class="inner">
+				<header>
+					<a href="../../../index.html"><img src="../../../imagenes/logoterras.png" alt="Logo Terras de Iria"></a>
+					<hr>
+				</header>
+
+				<!-- inicio Menu -->
+				<nav id="menu">
+
+					<ul>
+						<!-- aqui empieza el menu de  Historia -->
+						<li><span class="opener active"><a>Historia</a></span>
+							<ul>
+								<span class="submenu">
+                                    <li><a href="../debullar_portada.html">Portadas Revistas Debullar</a></li>
+									<li><a href="../debullar_2017/revista_debullar_2017.html">Debullar 2017</a></li>
+									<li><a href="../debullar_2018/revista_debullar_2018.html">Debullar 2018</a></li>
+									<li><a href="../debullar_2019/revista_debullar_2019.html">Debullar 2019</a></li>
+									<li><a href="revista_debullar_2020.html">Debullar 2020</a></li>
+
+
+								</span>
+							</ul>
+						</li>
+						<!-- aqui termina el menu de  Historia -->
+					</ul>
+				</nav>
+				<!-- fin Menu -->
+			</div>
+			<!-- fin inner -->
+
+		</div>
+		<!-- fin Sidebar -->
+
+	</div>
+	<!-- fin Wrapper -->
+	<!-- Scripts -->
+	<script src="../../../assets/js/jquery.min.js"></script>
+	<script src="../../../assets/js/skel.min.js"></script>
+	<script src="../../../assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="../../../assets/js/main.js"></script>
+
+</body>
+
+</html>
