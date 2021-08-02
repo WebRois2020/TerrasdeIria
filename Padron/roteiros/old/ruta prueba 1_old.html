@@ -1,0 +1,798 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+
+	<title>Ruta literaria de Camilo José Cela en Padrón 1</title>
+
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+	<script src="https://kit.fontawesome.com/f35a40f132.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="../../assets/css/main_padron.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/menu.css" />
+	<link rel="icon" href="../../favicon.ico" />
+
+	<style type="text/css">
+
+
+
+header h1, header h3, header h4 {
+	color: white;
+	font-family: 'Raleway', sans-serif;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+
+header h3 {
+	font-weight: 300;
+	font-size: 1.5em;
+	letter-spacing: 0.15em;
+}
+
+
+
+header i {
+	text-align: center;
+	position: absolute;
+	bottom: 1%;
+	left: 50%;
+	color: #FFF;
+	animation: 1.5s bounce infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-20px);}
+    60% {transform: translateY(-10px);}
+} 
+
+#efecto div {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 1em;
+	border-top: 3px solid white;
+	border-bottom: 3px solid white;
+	margin-top: -5vh;
+}
+
+#contenido {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	    flex-direction: column;
+	-ms-flex-align: center;
+	    align-items: center;
+	margin: auto;
+	color: #242424;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+}
+
+#about {
+	padding: 1em;
+	background-color: #F2F2F2;
+	position: relative;
+}
+
+#about:after {
+	content: '';
+	display: block;  
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 0;
+	height: 0;
+	border-top: 33px solid #F2F2F2;
+	border-right: 50vw solid transparent;
+	border-bottom: 0 solid transparent;
+	border-left: 50vw solid transparent;
+}
+
+.seccion {
+	text-align: center;
+	font-size: 4em;
+	margin: auto;
+	margin-top: 0.5em;
+	margin-bottom: 0.4em;
+	color: #8F000A;
+}
+
+#about p {
+	margin: 0 10vw;
+	font-size: 1.1em;
+	letter-spacing: 0.1em;
+	line-height: 1.5em;
+}
+
+b {
+	font-weight: 600;
+	color: #8F000A;
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+}
+
+i {
+	color: #303030;
+}
+
+#cita {
+	padding: 60px 0;
+	background-color: #8F000A;
+	width: 100%;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	color: #F2F2F2;
+}
+
+#cita i {
+	color: #F2F2F2;
+	font-size: 3em;
+	padding-right: 10px;
+}
+
+#cita p {
+	font-size: 1.3em;
+	padding-left: 10px;
+	border-left: 2px solid #F2F2F2;
+	font-weight: 300;
+}
+
+#contenidoCita {
+	max-width: 60vw;
+}
+
+#contenedorTimeline {
+	background-color: #F2F2F2;
+	width: 100%;
+	position: relative;
+}
+
+#contenedorTimeline:after {
+	content: '';
+	display: block;  
+	position: absolute;
+	left: 0;
+	bottom: 100%;
+	width: 0;
+	height: 0;
+	/*border-bottom: 33px solid #F2F2F2;
+	border-right: 50vw solid transparent;
+	border-top: 0 solid transparent;
+	border-left: 50vw solid transparent;*/
+}
+
+/* 
+ * --  Timeline --
+ * Basado en: https://codepen.io/itbruno/pen/KwarLp
+ */
+.timelineItem:after, .timelineItem:before {
+	content: '';
+	display: block;
+	width: 100%;
+	clear: both;
+}
+
+#timeline {
+	width: 100%;
+	margin: 30px auto;
+	position: relative;
+	padding: 0 10px;
+}
+
+#timeline:before {
+	content: '';
+	width: 3px;
+	height: 100%;
+	background: #8F000A;
+	left: 50%;
+	top: 0;
+	position: absolute;
+}
+
+#timeline:after {
+	content: '':
+	;clear:; both;
+	display: table;
+	width: 100%;
+}
+
+.timelineItem {
+	margin-bottom: 50px;
+	position: relative;
+}
+
+.timelineIcon {
+	background: #8F000A;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	overflow: hidden;
+	margin-left: -23px;
+	border-radius: 50%;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+}
+
+.timelineIcon i {
+	font-size: 25px;
+	color: white;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.timelineContent {
+	width: 45%;
+	background: #FFFFFF;
+	padding: 20px;
+	box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
+}
+
+.timelineContent h2 {
+	padding: 15px;
+	background: #8F000A;
+	color: #FFF;
+	margin: -20px -20px 0 -20px;
+	border-radius: 3px 3px 0 0;
+	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.timelineContent h3 {
+	font-weight: 300;
+	color: #434343;
+	padding: 8px 0;
+	font-size: 1em;
+}
+
+.timelineContent div {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+}
+
+.timelineContent img {
+	width: 100%;
+	height: auto !important;
+	max-height: 200px;
+	padding: .5em;
+	object-fit: contain;
+}
+
+.timelineContent p {
+	line-height: 1.45em;
+}
+
+.timelineContent:before {
+	content: '';
+	position: absolute;
+	left: 45%;
+	top: 20px;
+	width: 0;
+	height: 0;
+	border-top: 0px solid transparent;
+	border-bottom: 7px solid transparent;
+	border-left: 7px solid #8F000A;
+}
+
+.timelineContent.right {
+	float: right;
+}
+
+.timelineContent.right:before {
+	content: '';
+	right: 45%;
+	left: inherit;
+	border-left: 0;
+	border-right: 7px solid #8F000A;
+}
+
+@media (max-width: 768px) {
+	#timeline {
+		margin: 30px;
+		padding: 0;
+		width: 90%;
+	}
+	#timeline:before {
+		left: 0;
+	}
+	.timelineContent {
+		width: 90%;
+		float: right;
+	}
+	.timelineContent:before, .timelineContent.right:before {
+		left: 10%;
+		margin-left: -6px;
+		border-left: 0;
+		border-right: 7px solid #8F000A;
+	}
+	.timelineIcon {
+		left: 0;
+	}
+	.timelineContent div {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-align: center;
+		    align-items: center;
+		-ms-flex-pack: center;
+		    justify-content: center;
+		-ms-flex-direction: column;
+		    flex-direction: column;
+	}
+	.timelineContent img {
+		width: 80%;
+		height: auto !important;
+		display: block;
+		padding: .5em;
+	}
+}
+/*
+#borde {
+	display: block;
+	left: 0;
+	bottom: 100%;
+	width: 0;
+	height: 0;
+	border-top: 33px solid #F2F2F2;
+	border-right: 50vw solid transparent;
+	border-bottom: 0 solid transparent;
+	border-left: 50vw solid transparent;
+	z-index: 3;
+}*/
+
+#miiverse {
+	background-color: #8F000A;
+	width: 100%;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-align: center;
+	    align-items: center;
+	-ms-flex-pack: center;
+	    justify-content: center;
+	position: relative;
+	margin-top: 0px;
+	padding-top: 0px;
+	padding-bottom: 50px;
+	color: #F2F2F2;
+}
+
+#miiverse p {
+	font-size: 1.3em;
+	padding-left: 10px;
+	border-left: 2px solid #F2F2F2;
+	font-weight: 300;
+}
+
+#contenidoMiiverse {
+	padding-right: 10px; 
+}
+/*
+footer {
+	background-color: #420005;
+	width: 100%;
+	position: relative;
+	color: #F2F2F2;
+	text-align: center;
+	padding-bottom: 1.7em;
+}
+
+footer:before {
+	content: '';
+	display: block;  
+	position: absolute;
+	left: 0;
+	bottom: 100%;
+	width: 0;
+	height: 0;
+	border-bottom: 33px solid #420005;
+	border-right: 50vw solid transparent;
+	border-top: 0 solid transparent;
+	border-left: 50vw solid transparent;
+}
+
+footer h1 {
+	padding: 0.3em 0.7em;
+	font-weight: 300;
+	font-size: 2.5em;
+}
+
+footer h2 {
+	text-align: center;
+	padding: 0.1em 0.7em;
+	font-weight: 300;
+	font-size: 1.5em;
+}
+
+footer a {
+	color: #F2F2F2;
+}
+
+footer a:hover {
+	color: #F48484;
+	transition: 0.3s ease;
+}
+
+footer p {
+	font-size: 0.8em;
+	padding-top: 0.6em;
+}*/
+.boton{
+  color:#8f000a;
+  padding:4em;
+  font-size: 1.4em;
+  font-variant: small-caps;
+  font-weight: bold;
+ text-decoration: none;
+
+}
+.boton:hover{
+  color:#8f000a;
+  padding:4em;
+  font-size: 1.4em;
+  font-variant: small-caps;
+  font-weight: bold;
+ text-decoration: underline;
+
+}
+
+.pie{
+	color:white;
+	font-variant: small-caps;
+	font-weight: bolder;
+}
+
+.xela:hover{
+
+	transform: translate(10%, 45%)scale(2);
+	-webkit-transform: translate(10%, 45%) scale(2);
+	/** Safari & Chrome **/
+	-o-transform: translate(10%, 45%) scale(2);
+	/** Opera **/
+	-moz-transform: translate(10%, 45%) scale(2);
+	/** Firefox **/
+	box-shadow: 5px 5px 10px #666;
+	z-index: 99999999;
+	background-color: white;
+	border:none;
+}
+
+.cssToolTip {
+	position: relative;
+	/* Esta clase tiene que tener posicion relativa */
+	color: #000;
+	/* Color del texto */
+}
+
+/* El tooltip */
+
+.cssToolTip span {
+	background-color: #fff;
+	border: 2px solid #fff;
+
+	box-shadow: 5px 5px 5px #333;
+	color: #000;
+	display: none;
+	/* El tooltip por defecto estara oculto */
+	font-size: 1em;
+	width: 20vw;
+	max-width: 200vw;
+	position: absolute;
+	bottom: auto;
+	left: 0px;
+	z-index: 999999;
+	line-height: 2em;
+	padding: 0.5em;
+	margin: 0.5em ;
+	border-radius: 0.2em;
+}
+
+/* El tooltip cuando se muestra */
+
+.cssToolTip:hover span {
+	display: inline;
+}
+
+</style>
+
+	</style>
+</head>
+
+<body>
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<!-- *************** INICIO header  *************** -->
+				<header>
+					<!-- <a href="index.html"><img  src="imagenes/logoterras.png"></a> -->
+					<a name="flotante"> </a>
+
+					<!-- *************** INICIO navegacion web  *************** -->
+					<nav class="nav-web">
+						<div class="inactive"><a class="nav-dodro" href="../../dodro.html">Dodro</a></div>
+						<div class="active"><a class="nav-padron" href="../../padron.html">Padrón</a> </div>
+						<div class="inactive"><a class="nav-rois" href="../../rois.html">Rois</a> </div>
+					</nav>
+				</header>
+	
+	<!-- *************** FIN header  *************** -->
+				<!-- *************** INICIO MENU NUEVO *************** -->
+	<div id="nav-nova">
+					<ul class="dropdown_menu">
+						<li>
+							<a href="#">Patrimonio</a>
+							<ul>
+								<li><a href="../patrimonio/cruceiros/">Cruceiros</a></li>
+								<li><a href="../patrimonio/">Hórreos</a></li>
+								<li><a href="../patrimonio/">Pombais</a></li>
+								<li><a href="../patrimonio/">Pazos</a></li>
+								<li><a href="../patrimonio/">Casas</a></li>
+								<li><a href="../patrimonio/">Capelas</a></li>
+								<li><a href="../patrimonio/">Igrexas</a></li>
+								<li><a href="../patrimonio/">Reloxos de sol</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Historia</a>
+							<ul>
+								<li><a href="#">Arquivos</a></li>
+								<li><a href="#">Lendas e Tradicións</a></li>
+								<li><a href="#">Revista Debullar</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">Persoeiros</a>
+							<ul>
+								<li><a href="#">Literatos</a></li>
+								<li><a href="#">Cultura</a></li>
+								<li><a href="#">Deporte</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Camiños</a>
+							<ul>
+
+							</ul>
+						</li>
+						<li>
+							<a href="#">Música</a>
+							<ul>
+								<li><a href="#">Fuliada</a></li>
+								<li><a href="#">Actualidade</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Mulleres</a>
+
+						</li>
+						<li>
+							<a href="#">Roteiros</a>
+							<ul>
+								<li><a href="#">Pensa nao</a></li>
+								<li><a href="#">Lestrobe</a></li>
+
+								<li><a href="#">Granxa e Fonte Primeiral</a></li>
+
+								<li><a href="#">Aldeas do Monte</a></li>
+
+								<li><a href="#">As Brañas</a></li>
+								<li><a href="#">Camiño Real</a></li>
+								<li><a href="#">Os Días ulvidados</a></li>
+								<li><a href="#">Inchadiña Branca Vela</a></li>
+								<li><a href="#">Pozo Bastón</a></li>
+
+							</ul>
+						</li>
+						<li>
+							<a href="#">Natureza</a>
+							<ul>
+								<li><a href="#">Xardín Botánico-Artístico de Padrón</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Servizos</a>
+							<ul>
+								<li><a href="#">Asociacións</a></li>
+								<li><a href="#">Sociais</a></li>
+								<li><a href="#">Biblioteca</a></li>
+								<li><a href="#">Deporte</a></li>
+								<li><a href="#">Educación</a></li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+				<!-- *************** FIN MENU NUEVO *************** -->
+	<!-- inicio Content -->
+				<section class="content">
+					<div class="migas">Natureza <i class="fa fa-chevron-right "></i> <a href="#"> Xardín Botánico-Artístico de Padrón</a> </div>
+
+					<header class="main">
+						<h1 class="texto-ocrepadron">Xardín Botánico-Artístico de Padrón </h1><br>
+					</header>
+
+<article>
+		
+		<div id="cita">
+			
+			<img src="../../imagenes/img_padron/rutas_literarias/cela1/CamiloJoseCela.jpg" alt="Imaxe do mapa da ruta">
+			<div id="contenidoCita">
+				<p>“En Iria aprendí fabulosas historias de la familia, marinos que habían dado la vuelta al mundo, abuelos que construían ferrocarriles en la India, tíos abuelos que desarmaban moros a patadas, príncipes húngaros que pretendían emparentar con nosotros… En Iria también aprendí a cazar grillos y a amaestrar pollos, que no es nada fácil y que hay que tener mucha paciencia…” <br>
+				Camilo José Cela. La rosa.</p>
+			</div>
+		</div>
+		<!-- Fuente: http://www.polygon.com/features/2015/7/13/8940557/satoru-iwata-accomplishments-timeline-biography-life -->
+	<div id="contenedorTimeline">
+			
+			<div id="timeline">
+				<div class="timelineItem">
+					<div class="timelineIcon">
+						<img class="iconos" src="../../imagenes/iconos/iconos_caminho/iconomuseo.png" alt="Imaxe icono museo" />
+					</div>
+					<div class="timelineContent">
+						<h2>Fundación Pública Galega Camilo José Cela </h2>
+						
+						<div>	
+							<p class="cssToolTip"><span>“Aquí se encierra todo cuanto, desde hoy, dono a la cultura para su mejor beneficio y más adecuado y provechoso logro. Lo que aquí se ha de guardar lo entrego a la cultura, decía, ese latido que se expresa en todas las lenguas del mundo, presentes y aun pretéritas, vivas e incluso muertas, grandes y también pequeñas, de origen cierto y noble de cuna desconocida y borrada, pero también lo deposito –y ni por capricho ni por casualidad- en el confín del Occidente que me vio nacer para mi fortuna y mi orgullo. Vaya hacia esta verde y luminosa y entrañable latitud mi mejor y más rendido reconocimiento.”</span> Camilo José Cela.<br>
+							 Discurso de inauguración de la Fundación Camilo José Cela<br>
+							  Iria Flavia, 11/6/1991 </p>
+
+							  <p class="cssToolTip">
+								<img class="xela" src="../../imagenes/img_padron/rutas_literarias/cela1/fundacion1.jpg" alt="Imaxe da Fundación Pública Galega Camilo José Cela" /></p>
+								
+						</div>
+					</div>
+				</div>
+
+				<div class="timelineItem">
+					<div class="timelineIcon">
+						<img class="iconos" src="../../imagenes/iconos/iconos_caminho/iconoobracivil.png" alt="Imaxe icono obra civil" />   
+					</div>
+					<div class="timelineContent right">
+						<h2>Casa natal Camilo José Cela</h2>
+							<div>	
+							<p class="cssToolTip"><span>“En la vía, en el paso a nivel de Iria Flavia, construyó mi bisabuelo su casa, como buen ferroviario, y en esta casa nacimos mi abuela Nina y yo. La casa de Iria es una casa cuadrada, de dos plantas con dos galerías, una al norte y otra al sur, y con la fachada principal –que ahora, con la desviación de la carretera, queda a la parte de atrás- cubierta por completa de guisantes de olor, de rosas francesillas y de madreselva. Alrededor de la casa hay un jardín donde en tiempos – tiempos que yo recuerdo, ¡ay!, perfecta y dolorosamente- crecían las palmeras airosas, y el inmenso y extraño naranjo, y el aromático limonero y, a su lado, el pino real y el árbol del holle, el árbol de las navidades inglesas y de los más clásicos christmas-cards, con sus pinchantes hojas de un verde brillador y sus minúsculos frutos de un rojo reluciente.”  </span> <br>
+							 ”Merendábamos en un pradito que había detrás de la casa y que hoy se comió la desviación de la carretera.” Camilo José Cela. La rosa.<br></p>
+
+							  <p class="cssToolTip">
+								<img class="xela" src="../../imagenes/img_padron/rutas_literarias/cela1/fundacion1.jpg" alt="Imaxe da Fundación Pública Galega Camilo José Cela" />
+								<span>	<img class="xela" src="../../imagenes/img_padron/rutas_literarias/cela1/casa1.jpg" alt="Imaxe da Fundación Pública Galega Camilo José Cela" />
+								</span>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<div class="timelineItem">
+					<div class="timelineIcon">
+						<i class="fa fa-gamepad"></i>
+					</div>
+					<div class="timelineContent">
+						<h2>Cambio de vida ..Vigo</h2>
+						<h3><b>1969</b></h3>
+						<div>
+							<p>A familia trasládase a <b>Vigo</b>, cidade decisiva na biografía e na obra dunha<b> “nena de barrio e vida proletaria”</b>, nas súas palabras.Completa ensino primario na <b>Escola Nacional Graduada de Sárdoma en Moledo</b> onde o seu pai exerce como mestre.</p>
+							<img class="xela" src="img/xela_nena.jpg">
+						</div>
+					</div>
+				</div>
+
+				<div class="timelineItem">
+					<div class="timelineIcon">
+						<i class="fa fa-gamepad"></i>
+					</div>
+					<div class="timelineContent right">
+						<h2>Estudos e traballo</h2>
+						<h3><b>1976 — 1979</b></h3>
+						<div><img class="xela" src="img/nova.jpg">
+							<p> En <b>1976</b> ingresou no <b>Instituto Castelao</b> do barrio do Calvario . Facendo o COU abandonou os estudos, e comezou a traballar en <b>Edicións Xerais de Galicia</b>, desde o seu nacemento en <b>1979</b>, canda Xulián Maure Rivas e Roberto Pérez Pardo,como oficinista.</p>
+							
+								
+						</div>
+					</div>
+				</div>
+
+				<div class="timelineItem">
+					<div class="timelineIcon">
+						<i class="fa fa-briefcase"></i>
+					</div>
+					<div class="timelineContent">
+						<h2>Publicacións en xornais e revistas</h2>
+						<h3><b>1980</b></h3>
+						<div>
+							
+							<p>Publicou en xornais e revistas coma <b>A Nosa Terra, Diario 16 de Galicia, Faro de Vigo, Jornal de Notícias do Porto, Dorna, Tintimán, Carel ou Katarsis</b>, colaborou en publicacións coma Festa da Palabra Silenciada, Luzes de Galiza ou Boletín Galego de Literatura e formou parte do consello de redacción de Viceversa, revista galega de tradución.</p><img class="xela" src="img/xela_revista.jpg">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+
+
+<!-- Footer -->
+					<footer>
+						<div class="copyright">
+							<img src="../../imagenes/logos.jpg" alt="Logotipos Obradoiros de Emprego" />
+							<div>
+								<a target="_blank" href="../../videos/Obradoiro Rois.m4v">O proxecto</a>
+								<a href="../sitemap.html">Mapa Web</a>
+							</div>
+							<div>
+								<a title="Link a Concello de Dodro" href="http://www.dodro.gal/" target="_blank"> Concello de Dodro</a>
+								<a title="Link a Concello de Padrón" href="http://padron.gal/es/" target="_blank"> Concello de Padrón</a>
+								<a title="Link a Concello de Rois" href="https://www.rois.gal/es/" target="_blank">Concello de Rois</a>
+								<a title="Link á Páxina Terras de Iria" href="http://terrasdeiria.com/" target="_blank"> Terras de Iria</a>
+							</div>
+						</div>
+					</footer>
+				</section>
+				<!-- fin content -->
+				<a class="flotante" href="#flotante" title="Ir arriba"><i class="fa fa-arrow-circle-up fa-2x"></i></a>
+				<!-- fin content -->
+			</div>
+			<!-- fin inner -->
+		</div>
+		<!-- fin main -->
+
+		<!-- inicio Sidebar -->
+		<div id="sidebar">
+			<!-- Menu Sidebar -->
+			<div class="inner">
+				<header>
+					<a href="../../index.html"><img src="../../imagenes/logoterras.png"></a>
+				</header>
+
+				<!-- inicio Menu -->
+				<nav id="menu">
+
+					<ul>
+						<!-- aqui empieza el menu de  Historia -->
+						<li><span class="opener active"><a>Xardín Botánico-Artístico</a></span>
+						<ul>
+							<span class="submenu">
+								<li>
+									<a href="optimizado/04_aesculus_hippocastanum_GALEGO.pdf" data-title="Descarga pdf">Castiñeiro de Indias</a>
+								</li>
+
+								</span>
+							</ul>
+						</li>
+						<!-- aqui termina el menu de  Historia -->
+					</ul>
+				</nav>
+				<!-- fin Menu -->
+			</div>
+			<!-- fin inner -->
+
+		</div>
+		<!-- fin Sidebar -->
+
+	</div>
+	<!-- fin Wrapper -->
+	<!-- Scripts -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/skel.min.js"></script>
+	<script src="../../assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
