@@ -1,0 +1,431 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Land Art Seira</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta lang="gl">
+	<meta itemprop="author" content="Obradoriro de Emprego Xuventude en Acción 2019 Dodro,Padrón, Rois." />
+	<meta name="title" content="Sitio Coñece Terras de Iria, creado no Obradoriro de Emprego 	 Xuventude en Acción 2019 Dodro, Padrón, Rois.">
+	<meta name="description" content="Sitio Coñece Terras de Iria, creado no Obradoriro de Emprego  Xuventude en Acción 2019 Concello de Dodro, Concello de Padrón e Concello de Rois.">
+	<meta name="keywords" content="Dodro, Rois, Padrón, Municipio, Concello, Ayuntamiento, Terras de Iria, Galicia, Xacobeo, Patrimonio, Roteiros, Historia, Natureza, Toponimia, Xentes, Música Tradicional, ">
+	<meta name="robots" content="index,follow" />
+
+	<script src="https://kit.fontawesome.com/f35a40f132.js" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/main_rois.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/menu.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/menu_novo.css" />
+	<link rel="icon" href="../../favicon.ico" />
+	<link rel="index" href="./" title="Inicio" />
+	<style>
+		.slides {
+			padding: 0;
+			width: 835px;
+			height: 487px;
+			display: block;
+			margin: 0 auto;
+			position: relative;
+		}
+
+		.slides * {
+			user-select: none;
+			-ms-user-select: none;
+			-moz-user-select: none;
+			-khtml-user-select: none;
+			-webkit-user-select: none;
+			-webkit-touch-callout: none;
+		}
+
+		.slides input {
+			display: none;
+		}
+
+		.slide-container {
+			display: block;
+		}
+
+		.slide {
+			top: 0;
+			opacity: 0;
+			width: 835px;
+			height: 487px;
+			display: block;
+			position: absolute;
+
+			transform: scale(0);
+
+			transition: all .7s fade;
+		}
+
+		.slide img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.nav label {
+			width: 200px;
+			height: 100%;
+			display: none;
+			position: absolute;
+
+			opacity: 0;
+			z-index: 9;
+			cursor: pointer;
+
+			transition: opacity .2s;
+
+			color: #FFF;
+			font-size: 100pt;
+			text-align: center;
+			background-color: rgba(255, 255, 255, .3);
+			text-shadow: 0px 0px 15px rgb(119, 119, 119);
+			font-weight: 300;
+		}
+
+		.slide:hover+.nav label {
+			opacity: 0.5;
+		}
+
+		.nav label:hover {
+			opacity: 1;
+		}
+
+		.nav .next {
+			right: 0;
+		}
+
+		input:checked+.slide-container .slide {
+			opacity: 1;
+
+			transform: scale(1);
+
+			transition: opacity 0.3s ease-in-out;
+		}
+
+		input:checked+.slide-container .nav label {
+			display: block;
+		}
+
+		.nav-dots {
+			width: 100%;
+			bottom: 9px;
+			height: 11px;
+			display: block;
+			position: absolute;
+			text-align: center;
+		}
+
+		.nav-dots .nav-dot {
+			top: 40px;
+			width: 11px;
+			height: 11px;
+			margin: 0 4px;
+			position: relative;
+			border-radius: 100%;
+			display: inline-block;
+			background-color: #ccc;
+		}
+
+		.nav-dots .nav-dot:hover {
+			cursor: pointer;
+			background-color: blue;
+		}
+
+		input#img-1:checked~.nav-dots label#img-dot-1,
+		input#img-2:checked~.nav-dots label#img-dot-2,
+		input#img-3:checked~.nav-dots label#img-dot-3,
+		input#img-4:checked~.nav-dots label#img-dot-4,
+		input#img-5:checked~.nav-dots label#img-dot-5,
+		input#img-6:checked~.nav-dots label#img-dot-6 {
+			background: #a01b2e;
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<!-- *************** INICIO header  *************** -->
+				<header>
+					<a id="flotante"> </a>
+
+					<!-- *************** INICIO navegacion web  *************** -->
+					<nav class="nav-web">
+						<div class="inactive"><a class="nav-dodro" href="../../dodro.html">Dodro</a></div>
+						<div class="inactive"><a class="nav-padron" href="../../padron.html">Padrón</a> </div>
+						<div class="active"><a class="nav-rois" href="../../rois.html">Rois</a> </div>
+					</nav>
+				</header>
+				<!-- *************** FIN header  *************** -->
+
+				<!-- *************** INICIO MENU NUEVO *************** -->
+
+				<div id="nav-nova">
+					<ul class="dropdown_menu">
+						<li>
+							<a href="../patrimonio/patrimonio_Rois.html">Patrimonio</a>
+							<ul>
+								<li><a href="../patrimonio/cruceiros/cruceiros.html">Cruceiros</a></li>
+								<li><a href="../patrimonio/">Hórreos</a></li>
+								<li><a href="../patrimonio/">Pombais</a></li>
+								<li><a href="../patrimonio/">Pazos</a></li>
+								<li><a href="../patrimonio/">Casas</a></li>
+								<li><a href="../patrimonio/">Capelas</a></li>
+								<li><a href="../patrimonio/">Igrexas</a></li>
+								<li><a href="../patrimonio/">Reloxos de sol</a></li>
+
+							</ul>
+						</li>
+						<li>
+							<a href="#">Historia</a>
+							<ul>
+								<li><a href="../../Rois/">Arquivos</a></li>
+								<li><a href="../../Rois/">Lendas e Tradicións</a></li>
+								<li><a href="../festas/festas_rois.html">Festas e Romarías</a></li>
+								<li><a href="#">Revista Debullar</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">Persoeiros</a>
+							<ul>
+								<li><a href="#">Literatos</a></li>
+								<li><a href="#">Cultura</a></li>
+								<li><a href="#">Deporte</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Camiños</a>
+							<ul>
+
+							</ul>
+						</li>
+						<li>
+							<a href="../formacions/foliada.html">Música</a>
+							<ul>
+								<li><a href="../formacions/foliada.html">Fuliada</a></li>
+								<li><a href="#">Actualidade</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Mulleres</a>
+
+						</li>
+						<li>
+							<a href="#">Roteiros</a>
+							<ul>
+								<li><a href="#">Pensa nao</a></li>
+								<li><a href="#">Lestrobe</a></li>
+
+								<li><a href="#">Granxa e Fonte Primeiral</a></li>
+
+								<li><a href="#">Aldeas do Monte</a></li>
+
+								<li><a href="#">As Brañas</a></li>
+								<li><a href="#">Camiño Real</a></li>
+								<li><a href="#">Os Días ulvidados</a></li>
+								<li><a href="#">Inchadiña Branca Vela</a></li>
+								<li><a href="#">Pozo Bastón</a></li>
+
+							</ul>
+						</li>
+						<li>
+							<a href="#">Natureza</a>
+							<ul>
+
+							</ul>
+						</li>
+						<li>
+							<a href="#">Servizos</a>
+							<ul>
+								<li><a href="#">Asociacións</a></li>
+								<li><a href="#">Sociais</a></li>
+								<li><a href="#">Biblioteca</a></li>
+								<li><a href="#">Deporte</a></li>
+								<li><a href="#">Educación</a></li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+				<!-- *************** FIN MENU NUEVO *************** -->
+				<!-- inicio Content -->
+				<section class="content">
+					<div class="migas">Historia <i class="fa fa-chevron-right "></i> <a href="#">Land Art Seira</a> </div>
+
+					<header class="main">
+						<h1 class="texto-verderois">Land Art Seira</h1><br>
+					</header>
+					<article>
+
+						<ul class="slides">
+							<input type="radio" name="radio-btn" id="img-1" checked />
+							<li class="slide-container">
+								<div class="slide">
+									<img src="pages/0.jpg" />
+								</div>
+								<div class="nav">
+									<label for="img-6" class="prev">&#x2039;</label>
+									<label for="img-2" class="next">&#x203a;</label>
+								</div>
+							</li>
+
+							<input type="radio" name="radio-btn" id="img-2" />
+							<li class="slide-container">
+								<div class="slide">
+									<img src="pages/1.jpg" />
+								</div>
+								<div class="nav">
+									<label for="img-1" class="prev">&#x2039;</label>
+									<label for="img-3" class="next">&#x203a;</label>
+								</div>
+							</li>
+
+							<input type="radio" name="radio-btn" id="img-3" />
+							<li class="slide-container">
+								<div class="slide">
+									<img src="pages/3.jpg" />
+								</div>
+								<div class="nav">
+									<label for="img-2" class="prev">&#x2039;</label>
+									<label for="img-4" class="next">&#x203a;</label>
+								</div>
+							</li>
+
+							<input type="radio" name="radio-btn" id="img-4" />
+							<li class="slide-container">
+								<div class="slide">
+									<img src="pages/4.jpg" />
+								</div>
+								<div class="nav">
+									<label for="img-3" class="prev">&#x2039;</label>
+									<label for="img-5" class="next">&#x203a;</label>
+								</div>
+							</li>
+
+							<input type="radio" name="radio-btn" id="img-5" />
+							<li class="slide-container">
+								<div class="slide">
+									<img src="pages/1.jpg" />
+								</div>
+								<div class="nav">
+									<label for="img-4" class="prev">&#x2039;</label>
+									<label for="img-6" class="next">&#x203a;</label>
+								</div>
+							</li>
+
+							<input type="radio" name="radio-btn" id="img-6" />
+							<li class="slide-container">
+								<div class="slide">
+									<img src="pages/5.jpg" />
+								</div>
+								<div class="nav">
+									<label for="img-5" class="prev">&#x2039;</label>
+									<label for="img-1" class="next">&#x203a;</label>
+								</div>
+							</li>
+
+							<li class="nav-dots">
+								<label for="img-1" class="nav-dot" id="img-dot-1"></label>
+								<label for="img-2" class="nav-dot" id="img-dot-2"></label>
+								<label for="img-3" class="nav-dot" id="img-dot-3"></label>
+								<label for="img-4" class="nav-dot" id="img-dot-4"></label>
+								<label for="img-5" class="nav-dot" id="img-dot-5"></label>
+								<label for="img-6" class="nav-dot" id="img-dot-6"></label>
+							</li>
+						</ul>
+					</article>
+					<div class="fonte">
+						<h3>Fonte:</h3>
+						<span>dfsfsf ||sdfsfsdf ||dfsdfsdfsfsdfss</span>
+					</div><br>
+
+					<!-- Footer -->
+					<footer>
+						<div class="copyright">
+							<img src="../../imagenes/logos.jpg" alt="Logotipos Obradoiros de Emprego" />
+							<div>
+								<a target="_blank" href="../videos/Obradoiro Rois.m4v">O proxecto</a>
+								<a href="sitemap.html">Mapa Web</a>
+							</div>
+							<div>
+								<a title="Link a Concello de Dodro" href="http://www.dodro.gal/" target="_blank"> Concello de Dodro</a>
+								<a title="Link a Concello de Padrón" href="http://padron.gal/es/" target="_blank"> Concello de Padrón</a>
+								<a title="Link a Concello de Rois" href="https://www.rois.gal/es/" target="_blank">Concello de Rois</a>
+							</div>
+						</div>
+					</footer>
+				</section>
+				<!-- fin content -->
+				<a class="flotante" href="#flotante" title="Ir arriba"><i class="fa fa-arrow-circle-up fa-2x"></i></a>
+				<!-- fin content -->
+			</div>
+			<!-- fin inner -->
+		</div>
+		<!-- fin main -->
+
+		<!-- inicio Sidebar -->
+		<div id="sidebar">
+			<!-- Menu Sidebar -->
+			<div class="inner">
+				<header>
+					<a href="../../index.html"><img src="../../imagenes/logoterras.png"></a>
+					<hr>
+				</header>
+
+				<!-- inicio Menu -->
+				<nav id="menu">
+
+					<ul>
+						<!-- aqui empieza el menu de  Historia -->
+						<li><span class="opener active"><a>Land Art Seira</a></span>
+							<ul>
+								<span class="submenu">
+									<li><a onclick="check1()">susi foto6</a></li>
+									<li><a onclick="check2()">susi foto2</a></li>
+
+								</span>
+							</ul>
+						</li>
+						<!-- aqui termina el menu de  Historia -->
+					</ul>
+				</nav>
+
+				<!-- script para checar os inputs e mostralos no sidebar -->
+				<script>
+					function check1() {
+						document.getElementById("img-6").checked = true;
+					}
+
+					function check2() {
+						document.getElementById("img-2").checked = true;
+					}
+
+				</script>
+				<!-- fin Menu -->
+			</div>
+			<!-- fin inner -->
+		</div>
+		<!-- fin Sidebar -->
+	</div>
+	<!-- fin Wrapper -->
+
+	<!-- Scripts -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/skel.min.js"></script>
+	<script src="../../assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
