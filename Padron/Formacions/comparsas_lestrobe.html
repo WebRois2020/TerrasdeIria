@@ -1,0 +1,693 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Os sons do pobo</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta lang="gl">
+	<meta itemprop="author" content="Obradoiro Programa de Emprego Xuventude en Acción 2019 2020 2021 Dodro, Padrón, Rois" />
+	<meta name="title" content="Sitio Coñece Terras de Iria, creado no Obradoiro Programa de Emprego Xuventude en Acción 2019 2020 2021 Dodro, Padrón, Rois">
+	<meta name="description" content="Sitio Coñece Terras de Iria, creado no Obradoiro Programa de Emprego Xuventude en Acción 2019 2020 2021 Concello de Dodro, Concello de Padrón e Concello de Rois">
+	<meta name="keywords" content="Dodro, Rois, Padrón, Municipio, Concello, Ayuntamiento, Terras de Iria, Galicia, Xacobeo, Patrimonio, Historia, Lendas e Tradicións, Festas, Persoeiros, Camiño de Santiago, Música Tradicional, Roteiros, Natureza, Servizos,Toponimia">
+	<meta name="robots" content="index,follow" />
+
+	<script src="https://kit.fontawesome.com/f35a40f132.js" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/menu.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/main_padron.css" />
+
+	<link rel="icon" href="../../favicon.ico" />
+	<link rel="index" href="./" title="Inicio" />
+		<style>
+		#wrapper-comparsa {
+			width: 100%;
+			height: 55vh;
+
+			margin: 0 auto;
+			background-color: #fff;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+			display: flex;
+			/*necesario flex*/
+			align-items: left;
+			justify-content: left;
+/*			border: 1px solid blue;*/
+		}
+
+		#left-side {
+			height: 100%;
+			width: 10%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: "Roboto Slab", serif;
+			font-size: 1.2em;
+		}
+
+		#left-side ul li {
+			padding: 1em;
+			line-height: inherit;
+			color: rgba(51, 51, 51, 0.5);
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.2s ease-out;
+		}
+
+		#left-side ul li:hover {
+			transition: all 0.2s ease-out;
+		}
+
+
+		#left-side ul li.active {
+			color: #000;
+		}
+
+		/* ccontenedor das barras de color */
+		.border {
+			height: 100%;
+			width: auto;
+/*			border: 1px solid red;*/
+		}
+
+		/* estilo e  posicióon das barras de color */
+		.border #line.one,
+		.border #line.two,
+		.border #line.three,
+		.border #line.four {
+			width: 5px;
+			height: 3em;
+			background-color: #e5b700;
+			transition: all 0.4s ease-in-out;
+		}
+
+		.border #line.one {
+			margin-left: 0px;
+			margin-top: 4.5em;
+		}
+
+		.border #line.two {
+			margin-left: 0px;
+			margin-top: 110px;
+		}
+
+		.border #line.three {
+			margin-left: 0px;
+			margin-top: 165px;
+		}
+
+		.border #line.four {
+			margin-left: 0px;
+			margin-top: 220px;
+		}
+
+		/* espazo para as letras das composicións */
+		#right-side {
+			height: 55vh;
+			width: 100%;
+			
+			border-left: 1px solid #ccc;
+ 		}
+
+		#right-side #first,
+		#right-side #second,
+		#right-side #third,
+		#right-side #fourth {
+			position: absolute;
+			/* necesario position absolute */
+			height: 55vh;
+			width: 60%;
+
+			transition: all 0.6s ease-in-out;
+			margin-top: 0px;
+			opacity: 0;
+
+
+			column-count: 3;
+			-webkit-columns: 3 50px;
+			-moz-columns: 3 50px;
+			columns: 3 50px;
+
+			-webkit-column-gap: .2em;
+			-moz-column-gap: .2em;
+			column-gap: .2em;
+
+/*
+			-webkit-column-rule: 1px dotted red;
+			-moz-column-rule: 1px dotted red;
+			column-rule: 1px dotted red;
+*/
+
+			-webkit-column-fill: auto;
+			-moz-column-fill: auto;
+			column-fill: auto;
+
+
+			padding: .5em 1%;
+			text-align: left;
+
+		}
+
+		#right-side #first h2,
+		#right-side #second h2,
+		#right-side #third h2,
+		#right-side #fourth h2 {
+			font-weight: 800;
+			color: #333;
+			display: block;
+		}
+
+		#right-side #first p,
+		#right-side #second p,
+		#right-side #third p,
+		#right-side #fourth p {
+			color: #333;
+			font-weight: 500;
+			line-height: 1.333333334;
+/*
+			margin-bottom: 20px;
+			margin-bottom: 2rem;
+*/
+			text-align: justify;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		#right-side #first.active,
+		#right-side #second.active,
+		#right-side #third.active,
+		#right-side #fourth.active {
+			margin-top: 0px;
+			opacity: 1;
+			transition: all 0.6s ease-in-out;
+		}
+
+		span#comparsa {
+			font-weight: bold;
+			font-family: "Roboto Slab", serif;
+			display: block;
+			border: 1px solid blue;
+
+		}
+		
+	</style>
+
+</head>
+
+<body>
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+                
+				<!-- *************** INICIO header  *************** -->
+				<header>
+					<!-- <a href="index.html"><img  src="imagenes/logoterras.png"></a> -->
+                    <a name="flotante"></a>
+					<!-- *************** INICIO navegacion web  *************** -->
+					<nav class="nav-web">
+						<div class="inactive"><a class="nav-dodro" href="../../../dodro.html">Dodro</a></div>
+						<div class="active"><a class="nav-padron" href="../../../padron.html">Padrón</a> </div>
+						<div class="inactive"><a class="nav-rois" href="../../../rois.html">Rois</a> </div>
+
+						<!-- *************** FIN navegacion web  *************** -->
+					</nav>
+				</header>
+				<!-- *************** FIN header  *************** -->
+				<!-- *************** INICIO MENU NUEVO *************** -->
+
+				<div id="nav-nova">
+					<ul class="dropdown_menu">
+				        <li>
+							<a href="#">Camiños</a>
+							<ul>
+                                <li><a href="../caminhos/caminho_portugues.html">Camiño portugués</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Formacións</a>
+							<ul>
+                                <li><a href="portada_padron.html">Os sons do pobo</a></li>
+							</ul>
+						</li>						
+				        <li>
+							<a href="#">Historia</a>
+							<ul>
+								<li><a href="../lendas/lendas_padron.html">Lendas</a></li>
+								<li><a href="../historia/historia_Padron.html">Historia</a></li>
+								<li><a href="../historia/privilexios_Padron.html">Privilexios</a></li>
+								<li><a href="../pascua/pascua_de_padron.html">Pascua</a></li>
+								<li><a href="../festas/festas_padron.html">Festas</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="../mulleres/mulleres_padron.html">Mulleres</a>
+
+						</li>
+						<li>
+							<a href="#">Natureza</a>
+							<ul>
+                                <li><a href="../arbores/arbores_senlleiras_padron.html">Árbores senlleiras</a></li>
+								<li><a href="../natureza/xardin_botanico.html">Xardín botánico</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Patrimonio</a>
+							<ul>
+								<li><a href="../Patrimonio/capelas/capelas_intro.html">Capelas</a></li>
+								<li><a href="../Patrimonio/castros/castros_intro.html">Castros</a></li>
+								<li><a href="../Patrimonio/cruceiros/cruceiros_padron.html">Cruceiros</a></li>
+								<li><a href="../Patrimonio/horreos/horreos_padron_intro.html">Hórreos</a></li>
+								<li><a href="../Patrimonio/monumentos/monumentos_padron.html">Monumentos</a></li>
+								<li><a href="../Patrimonio/muinhos/muinhos_Padron.html">Muíños</a></li>
+								<li><a href="../Patrimonio/pazos_casas/pazos_casas_intro.html">Pazos e casas</a></li>
+								<li><a href="../Patrimonio/pombais/pombais_intro.html">Pombais</a></li>
+								<li><a href="../Patrimonio/reloxos_sol/reloxos_intro.html">Reloxos de sol</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Persoeiros</a>
+							<ul>
+								<li><a href="../persoeiros/persoeiros_padron.html#id01">Macías o Namorado</a></li>
+								<li><a href="../persoeiros/persoeiros_padron.html#id02">Juan Rodríguez de la Cámara</a></li>
+								<li><a href="../persoeiros/persoeiros_padron.html#id03">Rosalía de Castro</a></li>
+								<li><a href="../persoeiros/persoeiros_padron.html#id04">Manuel Barros</a></li>
+								<li><a href="../persoeiros/persoeiros_padron.html#id05">Nicasio Pajares</a></li>
+								<li><a href="../persoeiros/persoeiros_padron.html#id06">Camilo José Cela</a></li>
+								<li><a href="../persoeiros/persoeiros_padron.html#id07">Pepe Domingo Castaño</a></li>
+								<li><a href="../persoeiros/persoeiros_padron.html#id08">Masito Beiró</a></li>
+								<li><a href="../persoeiros/persoeiros_padron.html#id09">Ángel Grela</a></li>
+							</ul>
+                        </li>
+						<li>
+							<a href="#">Roteiros</a>
+							<ul>
+								<li><a href="../roteiros/ruta_cela_1.html">Ruta Cela 1</a></li>
+								<li><a href="../roteiros/ruta_cela_2.html">Ruta Cela 2</a></li>
+                                <li><a href="../roteiros/ruta_cela_3.html">Ruta Cela 3</a></li>
+                                <li><a href="../roteiros/del_minho_a_bidasoa.html">Miño al Bidasoa</a></li>
+							</ul>
+						</li>
+						
+						<li>
+							<a href="#">Servizos</a>
+							<ul>
+								<li><a href="../servizos/servizos_cultura_padron.html">Cultura</a></li>
+								<li><a href="../servizos/servizos_deporte_padron.html">Deporte</a></li>
+								<li><a href="../servizos/servizos_educacion_padron.html">Educación</a></li>
+								<li><a href="../servizos/servizos_sociais_padron.html">Social</a></li>
+							</ul>
+						</li>
+					</ul>
+
+				</div>
+				<!-- *************** FIN MENU NUEVO *************** -->
+                
+				<!-- inicio Content-->
+				<section class="content">
+					<div class="migas">Os sons do pobo <i class="fa fa-chevron-right "></i> <a href="#"> Lestrobe</a> <i class="fa fa-chevron-right "></i> <a href="#"> As comparsas</a></div>
+                    
+                    <article>
+                        <header class="main">
+                            <h1 class="texto-ocrepadron">As comparsas</h1>
+                        </header>
+							
+				        <div>
+                            <h2 class="texto-ocrepadron">As comparsas do entroido padrónes, 1908-1936</h2>
+				            <p>O entroido padronés era unha cita obrigada para as comparsas de Padrón e dos arredores. En 1908, en Lestrobe fundouse a comparsa La Baraja, dirixida por Anxeliño Balado e xestionada por unha comisión integrada por Adolfo Cardama Cortés, Ramón Suárez e Francisco Vázquez Torres. O director era don Ángel Balado e os músicos que a compuñan eran Avelino Baleirón, Campios Torres, Manuel Torres, José Vigo Torres e José B. Romero, Domingo Solar e Francisco Rey Domínguez. A comparsa posuía tamén uns socios, que eran Pedro Ares, Ramón Romero Abelleira, Amadeo Lestido Castro, Agustín Diz Romero, Avelino Abelleira, Daniel Serramito, Eduardo Vigo Soñora, Eduardo Méndez, Francisco Cristobo Castro, Segundo Angueira, Ventura Angueira, José Romero Ramos, Aurelio Varela, Leonardo Rodríguez Tourís, José Cristobo Castro, José Castro Gens, Andrés Vigo Barreiro, Ramón González, Fortunato Lorenzo Cruces, Domingo Boga, Francisco Otero, Leandro Boga Mosquera, Juan Boga, Juan Janeiro, José Mariño Rodríguez, José Caamaño, Manuel Angueira Garea, Manuel Angueira Méndez, José Varela, Leopoldo Lorenzo e Domingo Boga Castro.
+                            </p>
+                            <p>A comparsa interpretaría nese entroido as seguintes pezas: unha xota, unha ruada, un vals e unha danza, composicións comúns no repertorio de tódalas agrupacións, que maioritariamente se interpretaban en lingua castelá, aínda que algunhas delas empregaban o galego.
+                            </p>
+                            <p>No entroido de 1915, a comparsa de Anxeliño Balado denominouse Hijos de Lestrove e integrábana os seguintes músicos: Domingo Solar, José B. Romero, Campios Torres, Ramón Rodríguez, A. Tarela, Manuel Torres, José Vigo Torres e un coro de trinta e unha voces (Gerardo Angueira, Alejandro Boga, José Pérez, Francisco Baleirón, Rogelio Boga, Ramón Mariño, José Cristobo, Santiago Boga, Manuel Angueira, Ramón Angueira, Manuel Boga, Ramón Suárez Pérez, Santiago Álvarez, Avelino Abelleira, Pedro Ares, Ramón Abelleira, Manuel Romero, Ramón Angueira, Daniel Serramito, Modesto Vigo, Santiago Cristobo, Manuel Tubío, Ramón Cristobo, José Pérez, Nicolás Fabeiro, José Janeiro, Francisco Vázquez, Camilo Lorenzo e Castor Ares.
+                            </p>
+                            <p>Os participantes interpretaban un programa musical que posuía unha pauta determinada: un coro cantaba unha composición poética acompañado por uns músicos que interpretaban a partitura. Ruadas, danzas, xotas, valses, rumbas e mazurcas eran as composicións máis frecuentes. Cada comparsa normalmente interpretaba tres temas. A temática das composicións era variada: podían ser de carácter amoroso, temas de actualidade, relativas á diversión e á exaltación do entroido e dos produtos típicos, asuntos cómicos ou relativos ao xogo, exaltación da xuventude, crítica dos taberneiros ou das autoridades municipais polo mal estado de camiños ou das fontes, ou outras actuacións. A maioría dos letristas eran anónimos e agochábanse tras un pseudónimo, pero tamén habíaos con moita sona, que asinaban as súas composicións; tal era o caso do doutor Carballido<sup>3</sup>, Francisco Dios Bugallo da Ponte, Ángel Doce e Remigio Llerena en Pontecesures e B. Suárez de Calo. O compositor máis famoso foi don Juan Vigo “Carrandán”, de Lestrobe.
+                            </p>
+                            <p>Comparsas famosas, aparte das dúas lestrobeñas, foron:
+                            </p>
+                         
+                            <table class="table-wrapper" style="margin-left: 20%;">
+								<tr>
+									<td class="tabla-padron">1910</td>
+									<td>
+                                        <ul>
+                                        <li>El Arco Iris de Estramundi</li>
+                                        <li>Los Astros Turistas de Pontecesures</li>
+                                        </ul>
+                                    </td>
+								</tr>
+								<tr>
+									<td class="tabla-padron">1933</td>
+									<td>
+                                        <ul>
+                                            <li>Los Nuevos Murguistas de Padrón</li>
+                                        </ul>
+                                    </td>
+								</tr>
+								<tr>
+									<td class="tabla-padron">1934</td>
+									<td>
+                                        <ul>
+                                            <li>La Cuadrilla de los Niños de Padrón</li>
+                                        </ul>
+                                    </td>
+								</tr>
+								<tr>
+									<td class="tabla-padron">1935</td>
+									<td>
+                                        <ul>
+                                            <li>Os Troneras de Laraño, Santiago</li>
+                                            <li>Reunión Artística de Calo, Teo</li>
+                                            <li>Los Arlequines, Padrón</li>
+                                            <li>La Rumba Negra, Padrón
+                                            <li>Los Apaches del Amor, Cesures</li>
+                                        </ul>
+                                    </td>
+								</tr>
+								<tr>
+									<td class="tabla-padron">1936</td>
+									<td>
+                                        <ul>
+                                            <li></li>
+                                            <li>Los Soldados que Luchan por la Patria, A Ponte</li>
+                                            <li>Los Mozos Rondadores, Cesures</li>
+                                            <li>Los Astros, Padrón</li>
+                                            <li>Los Habitantes de Marte, Padrón</li>
+                                        </ul>
+                                    </td>
+								</tr>
+							</table>
+                            
+                            <p>A partir de 1936 prohibíronse as comparsas e desapareceu a tradición do entroido padronés, que tanta sona tivera, incluso máis alá das Terras de Iria.
+                            </p>
+                            <p>Como mostra desas composicións reproducimos as letras da comparsa lestrobeña La Baraja de Anxeliño Balado (1908) e da comparsa “El Arco Iris” de Estramundi (1910).
+                            </p>                            
+				        </div><br>                       
+                        	
+				       <div id="wrapper-comparsa">
+
+							<div id="left-side">
+								<ul>
+									<li id="oprimeiro" class="active">
+										Ruada
+									</li>
+									<li class="osegundo">
+										Danza
+									</li>
+									<li class=oterceiro>
+										Xota
+									</li>
+									<li class="ocuarto">
+										Vals
+									</li>
+								</ul>
+							</div>
+							<div class="border">
+								<div id="line" class="one"></div>
+							</div>
+							<div id="right-side">
+								<div id="first" class="active">
+							
+									Pueblo de Lestrove<br>
+									donde yo he nacido,<br>
+									aires de mi tierra,<br>
+									suelo el más querido.<br>
+									Yo no sé qué tiene<br>
+									el rincón bendito,<br>
+									que no encuentro otro<br>
+									como él tan bonito!<br>
+									¡Cuántas añoranzas<br>
+									trae al lestroveño!<br>
+									El pensar que dejé<br>
+									por otro su pueblo,<br>
+									cuna de recuerdos,<br>
+									de afectos y amores,<br>
+									gratas alegrías<br>
+									de tiempos mejores,<br>
+									que a vuestra belleza<br>
+									rendidos quedamos<br>
+									y en alegres cantos<br>
+									sólo amor cantamos.<br>
+									Que ante hechizos tales<br>
+									nadie dudar puede<br>
+									que hoy el de Lestrove<br>
+									admirado quede.<br>
+									Y así dos cariños<br>
+									tendrá el corazón,<br>
+									uno el de Lestrove<br>
+									otro el de Padrón.
+									<hr class="lina-corta">
+										
+									<span class="negrita">Comparsa “El Arco Iris” de Estramundi, entroido 1910</span><br>
+									Nada temáis de este arco iris<br>
+									porque de lluvia no es percursor.<br>
+									Sobre vosotras, hermosas niñas<br>
+									solo derraman lluvia y amor.<br>
+									Arco da bella llaman al otro,<br>
+									arco de amores debéis nombrar<br>
+									al que formando vamos nosotros<br>
+									pues solo amores sabemos dar.<br>
+									------- <br>
+									Eramos nuves (b) que en el espacio<br>
+									se dirigían a otra región,<br>
+									pero al miraros, lindas mujeres,<br>
+									el arco iris queda en Padrón.<br>
+									Por las miradas de vuestros ojos,<br>
+									que al sol ocultan con su fulgor,<br>
+									formamos todos el arco iris,<br>
+									niñas bonitas, en vuestro honor.
+								</div>
+								<div id="second">
+
+									Vuestros hechizos, bellas mujeres,<br>
+									que nos trae brindando amor<br>
+									que encantos tales nadie los tiene<br>
+									más que vosotras en la Región.<br>
+									Eso fue causa que de Lestrove<br>
+									aquí llegamos hoy a cantar<br>
+									y son dichosos los que cantando<br>
+									si una mirada pueden lograr.<br>
+									Los hijos de Lestrove<br>
+									hoy llegamos aquí<br>
+									que lejos de vosotras<br>
+									no podemos vivir.<br>
+									No pedimos cariño,<br>
+									porque no lo daréis,<br>
+									pedimos que un momento<br>
+									contemplaros dejéis.<br>
+									Y vuestra fama es notoria<br>
+									de belleza y es mundial<br>
+									que no existe otra hermosura<br>
+									que cual la vuestra no lo hay.<br>
+									Dejadnos breves instantes<br>
+									os contemplemos en el balcón<br>
+									y con sonrisas y con miradas<br>
+									premiéis vosotras nuestra canción.<br>
+									Que sólo con miradas<br>
+									satisfechos irán<br>
+									los hijos de Lestrove<br>
+									que cantando os están.<br>
+									Más queriendo vosotras<br>
+									pedimos mucho más,<br>
+									halagos y cariños<br>
+									amores además.<br>
+								</div>
+								<div id="third">
+
+									La cantora de Galicia<br>
+									que en este rincón vivió<br>
+									en sus cantares gallegos<br>
+									a Lestrove así cantó:<br>
+									“Como chove miudiño<br>
+									como miudiño chove<br>
+									polas brañas de Laíño<br>
+									polas veigas de Lestrove”.<br>
+									Viva la cantora<br>
+									de nuestras campiñas<br>
+									de nuestras costumbres<br>
+									de nuestra terriña.<br>
+									Viva Rosalía<br>
+									la insigne cantora<br>
+									que en cantigas bellas<br>
+									nos dio honor y gloria.<br>
+									Y si ella así cantando<br>
+									a Lestrove nombre dio<br>
+									es justo que a tales cantos<br>
+									responda nuestra canción.<br>
+									Canción nacida del alma<br>
+									tributo de admiración<br>
+									que le rinde entusiasmada<br>
+									esta humilde agrupación.<br>
+									Aplausos y hurras<br>
+									darle a Rosalía<br>
+									la eterna entusiasta<br>
+									de nuestra Galicia.<br>
+									¡Viva la cantora!<br>
+									¡Viva el ruiseñor!<br>
+									que encantos gallegos<br>
+									tal nombre nos dio.<br>
+									Pueblo que a los suyos honra<br>
+									se honra a sí propio también<br>
+									de no hacerle monumento<br>
+									su recuerdo es un deber.<br>
+									Por eso los de Lestrove<br>
+									no se pueden olvidar<br>
+									de la cantora gallega<br>
+									más grande y más popular.<br>
+									Por eso es Rosalía<br>
+									por hoy la mejor<br>
+									que dio en sus cantares<br>
+									nombre a la Región.<br>
+									Porque otra cantora<br>
+									como ella no hay<br>
+									ni más entusiasta<br>
+									ni más popular.<br>
+
+								</div>
+								<div id="fourth">
+									Quien tiene gratitud<br>
+									nunca se olvidará<br>
+									del amigo que ausente<br>
+									en América está.<br>
+									Que en días de alegrías<br>
+									debemos recordar<br>
+									al hijo de Lestrove<br>
+									que está allá del mar.<br>
+									Y con nuestras canciones<br>
+									mandarles mil abrazos<br>
+									sinceros, calurosos<br>
+									que estrechen nuestros lazos.<br>
+									Y que sea para ellos<br>
+									nuestro canto de amor<br>
+									porque aquí no tenemos<br>
+									otra cosa mejor.<br>
+									Y así los de Lestrove<br>
+									cifran hoy sus esperanzas<br>
+									que el viento llevará América<br>
+									mil gratas añoranzas.<br>
+									Que allá nuestros amigos<br>
+									que nos recuerdan tanto<br>
+									sabrán le dedicamos<br>
+									alegres este canto.<br>
+									Que grato les será<br>
+									a amigos tan queridos<br>
+									saber que los de aquí<br>
+									le están agradecidos.<br>
+									Que a América mandamos<br>
+									en forma de canción<br>
+									la inmensa gratitud<br>
+									de nuestro corazón.<br>
+								</div>
+							</div>
+							<hr>
+
+						</div>
+						<hr>
+						<div>
+                                <ul>
+                                <li><sup>3</sup>Carballido García, Manuel (Santiago Compostela, 1858- Padrón, 1935), médico,
+								profesor axudante da Facultade de Medicina da USC, xornalista galego. Exerceu
+								como médico en Padrón. Foi o primeiro director da revista Café con Gotas.</li>
+                                </ul>
+                        </div>
+						<!-- partial -->
+
+						<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+						<script src="../../assets/js/script_composicions.js"></script>                     
+                    </article>
+                       
+                    <!-- Footer -->
+					<footer>
+						<div class="copyright">
+							<img src="../../imagenes/logos.jpg" alt="Logotipos Obradoiros de Emprego" />
+							<div>
+								<a target="_blank" href="../../videos/Obradoiro Rois.m4v">O proxecto</a>
+								<a href="../../sitemap.html">Mapa Web</a>
+							</div>
+							<div>
+								<a title="Link a Concello de Dodro" href="http://www.dodro.gal/" target="_blank">Concello de Dodro</a> <a title="Link a Concello de Padrón" href="http://padron.gal/es/" target="_blank">Concello de Padrón</a>
+								<a title="Link a Concello de Rois" href="https://www.rois.gal/es/" target="_blank">Concello de Rois</a>
+							</div>
+						</div>
+					</footer>
+				</section>
+                
+                <a class="flotante" href="#flotante" title="Ir arriba"><i class="fa fa-arrow-circle-up fa-2x"></i></a>
+				<!-- fin content -->
+
+			</div>
+			<!-- fin inner -->
+
+		</div>
+		<!-- fin main -->
+        
+        <!-- inicio Sidebar -->
+		<div id="sidebar">
+			<!-- Menu Sidebar -->
+			<div class="inner">
+				<header>
+					<a href="../../index.html"><img  src="../../imagenes/logoterras.png" alt="Logotipo Terras de Iria"></a>
+				</header>
+                
+				<!-- inicio Menu -->
+				<nav id="menu">
+					<ul>
+						<!--aqui empieza el menu de Os sons do pobo-->
+						<li><span class="opener active"><a>Os sons do pobo</a></span>
+							<ul>
+								<span class="submenu">
+                                    <li><a href="portada_padron.html">Portada</a></li>
+                                    <li><a href="introducion_padron.html">Introdución</a></li>
+                                    <li><span class="opener2 active">Lestrobe</span>
+                                        <ul>
+                                            <li><a href="intro_bandas_lestrobe.html">Introdución</a></li>
+                                            <li><a href="bandas_lestrobe.html">As bandas</a></li>
+                                            <li><a class="active" href="#">As comparsas</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li><span class="opener2">Padrón</span>
+                                        <ul>
+                                            <li><a href="afeccionados.html">B.M. Afeccionados de Padrón</a></li>
+                                            <li><a href="forxan.html">B.M. Rosalía de Castro</a></li>
+                                            <li><a href="banda_padron.html">B.M. de Padrón</a></li>
+                                            <li><a href="municipal_padron.html">B.M. Municipal de Padrón</a></li>
+                                            <li><a href="escola_rosalia.html">Escola de Música Rosalía de Castro</a></li>
+											<li><a href="actualidade.html">Actualidade</a></li>
+                                        </ul>
+                                    </li>
+                                    
+                                    <li> <a href="agradecementos_padron.html">Outros datos</a></li>
+                                    <li><a href="bibliografia_padron.html">Bibliografía</a></li>
+                                    
+						       </span>
+						    </ul>
+					    </li>
+						<!--aqui termina el menu de Os sons do pobo-->
+					</ul>
+                    
+				</nav>
+                <div class="menuContainer"></div>
+                <!-- fin Menu -->
+
+			</div>
+			<!-- fin inner -->
+
+		</div>
+		<!-- fin Sidebar -->
+	</div>
+	<!-- fin Wrapper -->
+    
+	<!-- Scripts -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/skel.min.js"></script>
+	<script src="../../assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="../../assets/js/main.js"></script>
+    
+</body>
+</html>
+
+
+								

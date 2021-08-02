@@ -1,0 +1,536 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<title>Os sons do pobo</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta lang="gl">
+	<meta itemprop="author" content="Obradoiro Programa de Emprego Xuventude en Acción 2019 2020 2021 Dodro, Padrón, Rois" />
+	<meta name="title" content="Sitio Coñece Terras de Iria, creado no Obradoiro Programa de Emprego Xuventude en Acción 2019 2020 2021 Dodro, Padrón, Rois">
+	<meta name="description" content="Sitio Coñece Terras de Iria, creado no Obradoiro Programa de Emprego Xuventude en Acción 2019 2020 2021 Concello de Dodro, Concello de Padrón e Concello de Rois">
+	<meta name="keywords" content="Dodro, Rois, Padrón, Municipio, Concello, Ayuntamiento, Terras de Iria, Galicia, Xacobeo, Patrimonio, Historia, Lendas e Tradicións, Festas, Persoeiros, Camiño de Santiago, Música Tradicional, Roteiros, Natureza, Servizos,Toponimia">
+	<meta name="robots" content="index,follow" />
+
+	<script src="https://kit.fontawesome.com/f35a40f132.js" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="../../assets/css/main.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/menu.css" />
+	<link rel="stylesheet" type="text/css" href="../../assets/css/main_padron.css" />
+
+	<link rel="icon" href="../../../favicon.ico" />
+	<link rel="index" href="./" title="Inicio" />
+	<style>
+		#wrapper-comparsa {
+			width: 100%;
+			height: 60vh;
+
+			margin: 0 auto;
+			background-color: #fff;
+			box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+			display: flex;
+			/*necesario flex*/
+			align-items: left;
+			justify-content: left;
+			border: 1px solid blue;
+		}
+
+		#left-side {
+			height: 100%;
+			width: 15%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: "Roboto Slab", serif;
+			font-size: 1.2em;
+		}
+
+		#left-side ul li {
+			padding: 1em;
+			line-height: inherit;
+			color: rgba(51, 51, 51, 0.5);
+			font-weight: 500;
+			cursor: pointer;
+			transition: all 0.2s ease-out;
+		}
+
+		#left-side ul li:hover {
+			transition: all 0.2s ease-out;
+		}
+
+
+		#left-side ul li.active {
+			color: #000;
+		}
+
+		/* ccontenedor das barras de color */
+		.border {
+			height: 100%;
+			width: auto;
+			border: 1px solid red;
+		}
+
+		/* estilo e  posicióon das barras de color */
+		.border #line.one,
+		.border #line.two,
+		.border #line.three,
+		.border #line.four {
+			width: 5px;
+			height: 3em;
+			background-color: #e5b700;
+			transition: all 0.4s ease-in-out;
+		}
+
+		.border #line.one {
+			margin-left: 0px;
+			margin-top: 3em;
+		}
+
+		.border #line.two {
+			margin-left: 0px;
+			margin-top: 75px;
+		}
+
+		.border #line.three {
+			margin-left: 0px;
+			margin-top: 143px;
+		}
+
+		.border #line.four {
+			margin-left: 0px;
+			margin-top: 197px;
+		}
+
+		/* espazo para as letras das composicións */
+		#right-side {
+			height: 300px;
+			width: 100%;
+			overflow: hidden;
+			border-left: 1px solid #ccc;
+		}
+
+		#right-side #first,
+		#right-side #second,
+		#right-side #third,
+		#right-side #fourth {
+			position: absolute;
+			/* necesario position absolute */
+			height: 50vh;
+			width: 50%;
+
+			transition: all 0.6s ease-in-out;
+			margin-top: -350px;
+			opacity: 0;
+
+
+			column-count: 3;
+			-webkit-columns: 3 200px;
+			-moz-columns: 3 200px;
+			columns: 3 200px;
+
+			-webkit-column-gap: 1em;
+			-moz-column-gap: 1em;
+			column-gap: 1em;
+
+/*
+			-webkit-column-rule: 1px dotted red;
+			-moz-column-rule: 1px dotted red;
+			column-rule: 1px dotted red;
+*/
+
+			-webkit-column-fill: auto;
+			-moz-column-fill: auto;
+			column-fill: auto;
+
+
+			padding: .5em 1%;
+			text-align: left;
+
+		}
+
+		#right-side #first h2,
+		#right-side #second h2,
+		#right-side #third h2,
+		#right-side #fourth h2 {
+			font-weight: 800;
+			color: #333;
+			display: block;
+		}
+
+		#right-side #first p,
+		#right-side #second p,
+		#right-side #third p,
+		#right-side #fourth p {
+			color: #333;
+			font-weight: 500;
+			line-height: 1.333333334;
+			margin-bottom: 20px;
+			margin-bottom: 2rem;
+			text-align: justify;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+
+		#right-side #first.active,
+		#right-side #second.active,
+		#right-side #third.active,
+		#right-side #fourth.active {
+			margin-top: 0px;
+			opacity: 1;
+			transition: all 0.6s ease-in-out;
+		}
+
+		span#comparsa {
+			font-weight: bold;
+			font-family: "Roboto Slab", serif;
+			display: block;
+			border: 1px solid blue;
+
+		}
+
+	</style>
+</head>
+
+<body>
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+
+				<!-- *************** INICIO header  *************** -->
+				<header>
+					<!-- <a href="index.html"><img  src="imagenes/logoterras.png"></a> -->
+					<a name="flotante"></a>
+					<!-- *************** INICIO navegacion web  *************** -->
+					<nav class="nav-web">
+						<div class="inactive"><a class="nav-dodro" href="../../../dodro.html">Dodro</a></div>
+						<div class="active"><a class="nav-padron" href="../../../padron.html">Padrón</a> </div>
+						<div class="inactive"><a class="nav-rois" href="../../../rois.html">Rois</a> </div>
+
+						<!-- *************** FIN navegacion web  *************** -->
+					</nav>
+				</header>
+				<!-- *************** FIN header  *************** -->
+				<!-- *************** INICIO MENU NUEVO *************** -->
+
+				<div id="nav-nova">
+					<ul class="dropdown_menu">
+						<li>
+							<a href="#">Patrimonio</a>
+							<ul>
+								<li><a href="#">Cruceiros</a></li>
+								<li><a href="../Horreos/horreos_de_Dodro.html">Hórreos</a></li>
+								<li><a href="../Pombais/pombais_Dodro.html">Pombais</a></li>
+								<li><a href="../pazos/pazo_hermida.html">Pazos</a></li>
+								<li><a href="../casas/casas_de_dodro.html">Casas</a></li>
+								<li><a href="../capelas/capela_aflixidos.html">Capelas</a></li>
+								<li><a href="../igrexas/igrexa_san_xoan.html">Igrexas</a></li>
+								<li><a href="../Reloxos_Sol/reloxos_Dodro.html">Reloxos de sol</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">Toponimia</a>
+							<ul>
+								<li><a href="#">toponimia 1</a></li>
+								<li><a href="#">toponimia 2</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">Historia</a>
+							<ul>
+								<li><a href="#">Arquivos</a></li>
+								<li><a href="#">Tradicións</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">Persoeiros</a>
+							<ul>
+								<li><a href="#">Literatos</a></li>
+								<li><a href="#">Cultura</a></li>
+								<li><a href="#">Deporte</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">Camiños</a>
+							<ul>
+
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">Música</a>
+							<ul>
+								<li><a href="#">Fuliada</a></li>
+								<li><a href="#">Actualidade</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">Mulleres</a>
+						</li>
+
+						<li>
+							<a href="#">Roteiros</a>
+							<ul>
+								<li><a href="#">Pensa nao</a></li>
+								<li><a href="#">Lestrobe</a></li>
+								<li><a href="#">Granxa e Fonte Primeiral</a></li>
+								<li><a href="#">Aldeas do Monte</a></li>
+								<li><a href="#">As Brañas</a></li>
+								<li><a href="#">Camiño Real</a></li>
+								<li><a href="#">Os Días ulvidados</a></li>
+								<li><a href="#">Inchadiña Branca Vela</a></li>
+								<li><a href="#">Pozo Bastón</a></li>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">Natureza</a>
+							<ul>
+							</ul>
+						</li>
+
+						<li>
+							<a href="#">Servizos</a>
+							<ul>
+								<li><a href="#">Asociacións</a></li>
+								<li><a href="#">Sociais</a></li>
+								<li><a href="#">Biblioteca</a></li>
+								<li><a href="#">Deporte</a></li>
+								<li><a href="#">Educación</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- *************** FIN MENU NUEVO *************** -->
+
+				<!-- inicio Content-->
+				<section class="content">
+					<div class="migas">Os sons do pobo <i class="fa fa-chevron-right "></i> <a href="#"> Lestrobe</a> <i class="fa fa-chevron-right "></i> <a href="#"> Composicións</a></div>
+
+					<article>
+						<header class="main">
+							<h1 class="texto-ocrepadron">Composicións</h1>
+						</header>
+
+						<div id="wrapper-comparsa">
+
+							<div id="left-side">
+								<ul>
+									<li id="oprimeiro" class="active">
+										Ruada
+									</li>
+									<li class="osegundo">
+										Danza
+									</li>
+									<li class=oterceiro>
+										Xota
+									</li>
+									<li class="ocuarto">
+										Vals
+									</li>
+								</ul>
+							</div>
+							<div class="border">
+								<div id="line" class="one"></div>
+							</div>
+							<div id="right-side">
+								<div id="first" class="active">
+									Pueblo de Lestrove<br>
+									donde yo he nacido,<br>
+									aires de mi tierra,<br>
+									suelo el más querido.<br>
+									Yo no sé qué tiene<br>
+									el rincón bendito,<br>
+									que no encuentro otro<br>
+									como él tan bonito!<br>
+									¡Cuántas añoranzas<br>
+									trae al lestroveño!<br>
+									El pensar que dejé<br>
+									por otro su pueblo,<br>
+									cuna de recuerdos,<br>
+									de afectos y amores,<br>
+									gratas alegrías<br>
+									de tiempos mejores,<br>
+									que a vuestra belleza<br>
+									rendidos quedamos<br>
+									y en alegres cantos<br>
+									sólo amor cantamos.<br>
+									Que ante hechizos tales<br>
+									nadie dudar puede<br>
+									que hoy el de Lestrove<br>
+									admirado quede.<br>
+									Y así dos cariños<br>
+									tendrá el corazón,<br>
+									uno el de Lestrove<br>
+									otro el de Padrón.<br>
+								</div>
+								<div id="second">
+
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. at viverra est, eu finibus mauris. Quisque tempus vestibulum fringilla. Morbi tortor eros, sollicitudin eu arcu sit amet, aliquet sagittis dolor.
+								</div>
+								<div id="third">
+
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. at viverra est, eu finibus mauris. Quisque tempus vestibulum fringilla. Morbi tortor eros, sollicitudin eu arcu sit amet, aliquet sagittis dolor.
+
+								</div>
+								<div id="fourth">
+									Pueblo de Lestrove<br>
+									donde yo he nacido,<br>
+									aires de mi tierra,<br>
+									suelo el más querido.<br>
+									Yo no sé qué tiene<br>
+									el rincón bendito,<br>
+									que no encuentro otro<br>
+									como él tan bonito!<br>
+									¡Cuántas añoranzas<br>
+									trae al lestroveño!<br>
+									El pensar que dejé<br>
+									por otro su pueblo,<br>
+									cuna de recuerdos,<br>
+									de afectos y amores,<br>
+									gratas alegrías<br>
+									de tiempos mejores,<br>
+									que a vuestra belleza<br>
+									rendidos quedamos<br>
+									y en alegres cantos<br>
+									sólo amor cantamos.<br>
+									Que ante hechizos tales<br>
+									nadie dudar puede<br>
+									que hoy el de Lestrove<br>
+									admirado quede.<br>
+									Y así dos cariños<br>
+									tendrá el corazón,<br>
+									uno el de Lestrove<br>
+									otro el de Padrón.<br>
+									Pueblo de Lestrove<br>
+									que hoy el de Lestrove<br>
+									admirado quede.<br>
+									Y así dos cariños<br>
+									tendrá el corazón,<br>
+									uno el de Lestrove<br>
+									otro el de Padrón.<br>
+									Pueblo de Lestrove<br>
+									que hoy el de Lestrove<br>
+									admirado quede.<br>
+									Y así dos cariños<br>
+									tendrá el corazón,<br>
+									uno el de Lestrove<br>
+									otro el de Padrón.<br>
+									Pueblo de Lestrove<br>
+									que hoy el de Lestrove<br>
+									admirado quede.<br>
+									Y así dos cariños<br>
+									tendrá el corazón,<br>
+									uno el de Lestrove<br>
+									otro el de Padrón.<br>
+									Pueblo de Lestrove<br>
+
+								</div>
+							</div>
+							<hr>
+
+						</div>
+						<!-- partial -->
+
+						<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+						<script src="script_composicions.js"></script>
+					</article>
+
+					<!-- Footer -->
+					<footer>
+						<div class="copyright">
+							<img src="../../imagenes/logos.jpg" alt="Logotipos Obradoiros de Emprego" />
+							<div>
+								<a target="_blank" href="../../videos/Obradoiro Rois.m4v">O proxecto</a>
+								<a href="../../sitemap.html">Mapa Web</a>
+							</div>
+							<div>
+								<a title="Link a Concello de Dodro" href="http://www.dodro.gal/" target="_blank">Concello de Dodro</a> <a title="Link a Concello de Padrón" href="http://padron.gal/es/" target="_blank">Concello de Padrón</a>
+								<a title="Link a Concello de Rois" href="https://www.rois.gal/es/" target="_blank">Concello de Rois</a>
+							</div>
+						</div>
+					</footer>
+				</section>
+
+				<a class="flotante" href="#flotante" title="Ir arriba"><i class="fa fa-arrow-circle-up fa-2x"></i></a>
+				<!-- fin content -->
+
+			</div>
+			<!-- fin inner -->
+
+		</div>
+		<!-- fin main -->
+
+		<!-- inicio Sidebar -->
+		<div id="sidebar">
+			<!-- Menu Sidebar -->
+			<div class="inner">
+				<header>
+					<a href="../../index.html"><img src="../../imagenes/logoterras.png" alt="Logotipo Terras de Iria"></a>
+				</header>
+
+				<!-- inicio Menu -->
+				<nav id="menu">
+					<ul>
+						<!--aqui empieza el menu de Os sons do pobo-->
+						<li><span class="opener active"><a>Os sons do pobo</a></span>
+							<ul>
+								<span class="submenu">
+									<li><a href="portada_padron.html">Portada</a></li>
+									<li><a href="introducion_padron.html">Introdución</a></li>
+									<li><span class="opener2 active">Lestrobe</span>
+										<ul>
+											<li><a href="intro_bandas_lestrobe.html">Introdución</a></li>
+											<li><a href="bandas_lestrobe.html">As bandas</a></li>
+											<li><a href="comparsas_lestrobe.html">As comparsas</a></li>
+											<li class="active"><a href="#">Composicións</a></li>
+										</ul>
+									</li>
+									<li><span class="opener2">Padrón</span>
+										<ul>
+											<li><a href="afeccionados.html">B.M. Afeccionados de Padrón</a></li>
+											<li><a href="forxan.html">B.M. Rosalía de Castro</a></li>
+											<li><a href="banda_padron.html">B.M. de Padrón</a></li>
+											<li><a href="municipal_padron.html">B.M. Municipal de Padrón</a></li>
+											<li><a href="escola_rosalia.html">Escola de Música Rosalía de Castro</a></li>
+										</ul>
+									</li>
+
+									<li> <a href="agradecementos_padron.html">Agradecementos</a></li>
+									<li><a href="bibliografia_padron.html">Bibliografía</a></li>
+									<li> <a href="creditos_padron.html">Créditos</a></li>
+								</span>
+							</ul>
+						</li>
+						<!--aqui termina el menu de Os sons do pobo-->
+					</ul>
+
+				</nav>
+				<div class="menuContainer"></div>
+				<!-- fin Menu -->
+
+			</div>
+			<!-- fin inner -->
+
+		</div>
+		<!-- fin Sidebar -->
+	</div>
+	<!-- fin Wrapper -->
+
+	<!-- Scripts -->
+	<script src="../../assets/js/jquery.min.js"></script>
+	<script src="../../assets/js/skel.min.js"></script>
+	<script src="../../assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
